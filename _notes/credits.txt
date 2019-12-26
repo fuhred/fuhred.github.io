@@ -1,0 +1,14 @@
+Banner photo
+Ferdinand Stohr 
+	https://unsplash.com/photos/NFs6dRTBgaM
+
+Flip animation modified from the following
+Dave Desandro
+	https://3dtransforms.desandro.com/card-flip
+	https://codepen.io/desandro/pen/LmWoWe
+Le Liu
+	https://codepen.io/le0864/pen/pbmoVQ
+
+Flip sound modified from the following
+dpren
+	https://freesound.org/people/dpren/sounds/248143/

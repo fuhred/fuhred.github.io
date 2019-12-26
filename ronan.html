@@ -61,7 +61,7 @@ p{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 100%;
+	width: 400px;
 	color: white;
 }	
 	
@@ -269,8 +269,8 @@ front and back are the faces of the flipper
 	<img src="start.png" class="start" alt="" align="middle" id="start" onclick="changeImage2()"/>
 	<div class="centered" id="result" onclick="changeImage2()"></div>
 	<div class="flipper" id="fliphandle" onclick="changeImage2()">
-		<img class="flipperface flipperface-front" src="heads.png" alt="HEADS">
-		<img class="flipperface flipperface-back" src="tails.png" alt="TAILS">
+		<img class="flipperface flipperface-front" src="ronan.png" alt="RONAN">
+		<img class="flipperface flipperface-back" src="ronan.png" alt="RONAN">
 	</div>
 </div>	
 </div>
@@ -280,13 +280,10 @@ front and back are the faces of the flipper
 <![endif]-->	
 	
 	
-<audio id="flipsound" src="flipsound.mp3" preload="auto">
+<audio id="flipsound" src="cowbell.wav" preload="auto">
   Your browser does not support the <code>audio</code> element.
 </audio>
 	
-<br><br><br>
-<p class="subtitle" style="text-align: center;">DISCLAIMER: This coin flipper was created for experimental purposes and will always flip tails first.</p>
-
 	
 <script language="javascript">
 	var element = document.getElementById("fliphandle");
@@ -309,7 +306,7 @@ front and back are the faces of the flipper
 			element.classList.toggle("isflippedtails");
 			// show text with delay
 			setTimeout(function(){document.getElementById("result").style.visibility = "visible";	// show text	
-								  document.getElementById('result').innerHTML = 'TAILS';  }, animDelay);
+								  document.getElementById('result').innerHTML = 'RONAN';  }, animDelay);
 			i=1;
 		} 
 		
@@ -331,12 +328,12 @@ front and back are the faces of the flipper
 					element.classList.add("isflippedheads"); 
 					// show text with delay
 					setTimeout(function(){document.getElementById("result").style.visibility = "visible";	// show text		
-										  document.getElementById('result').innerHTML = 'HEADS';  }, animDelay);
+										  document.getElementById('result').innerHTML = 'RONAN';  }, animDelay);
 				} else {
 					element.classList.toggle("isflippedtails");
 					// show text with delay
 					setTimeout(function(){document.getElementById("result").style.visibility = "visible";	// show text	
-										  document.getElementById('result').innerHTML = 'TAILS';  }, animDelay);
+										  document.getElementById('result').innerHTML = 'RONAN';  }, animDelay);
 				}
 
 			}, 100);
