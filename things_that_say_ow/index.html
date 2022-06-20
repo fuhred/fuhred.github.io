@@ -27,14 +27,14 @@ body {
 #content {
   text-align: center;
   display: flex;
-  width: 800px;
+  max-width: 750px;
   justify-content: center;
   align-items: center;
 }
 
 h1 {
 	text-align: center;
-	padding: 10px;
+	padding-bottom: 50px;
 	margin: 0px;
 	color: #88b5b7;
 }
@@ -44,15 +44,13 @@ h1 {
 }  
 
 .flex-child:first-child {
-    margin-right: 30px;
+	margin-right: 100px;
 } 
 
 .cubestyling {
-  width: 150px;
-  height: 150px;
-  padding: 50px;
+  max-width: 100%;
+  width: 125px; 
 }
-
 	
 	
 </style>
@@ -66,7 +64,7 @@ h1 {
 	<div><h1>Click a box!</h1></div>
 	<div id="content"> 
 	  <div><img class="flex-child cubestyling" src="cube.png" onclick="ow()"></div>
-	  <div><img class="flex-child cubestyling" src="cube.png" onclick="ha()"></div>
+	  <div><img class="cubestyling" src="cube.png" onclick="ha()"></div>
 	</div>  
 </div>
 
