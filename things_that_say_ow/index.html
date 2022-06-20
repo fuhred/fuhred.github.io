@@ -4,19 +4,27 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Coin Flip Simulator</title>
+	<title>Things that say ow</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" >	
 
 <style>
 
 body {
-  font-family: "open sans", sans-serif;
+  font-family: "Lato", "open sans", sans-serif;
   background: #f1f1f1;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
 
 #content {
-  margin: auto;
   text-align: center;
   display: flex;
   width: 800px;
@@ -26,9 +34,10 @@ body {
 
 h1 {
 	text-align: center;
-	padding: 50px;
+	padding: 10px;
+	margin: 0px;
+	color: #88b5b7;
 }
-
 
 .flex-child {
     flex: 1;	
@@ -53,14 +62,13 @@ h1 {
 <body> 
 
 
-
-<h1>Click a box!</h1>
-<div id="content">
-  
-  <div><img class="flex-child cubestyling" src="cube.png" onclick="ow()"></div>
-  <div><img class="flex-child cubestyling" src="cube.png" onclick="ha()"></div>
-  
-</div>  
+<div class="container">
+	<div><h1>Click a box!</h1></div>
+	<div id="content"> 
+	  <div><img class="flex-child cubestyling" src="cube.png" onclick="ow()"></div>
+	  <div><img class="flex-child cubestyling" src="cube.png" onclick="ha()"></div>
+	</div>  
+</div>
 
 
 	
