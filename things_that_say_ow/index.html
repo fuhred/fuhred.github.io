@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Coin Flip Simulator</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" >	
+
+<style>
+
+body {
+  font-family: "open sans", sans-serif;
+  background: #f1f1f1;
+}
+
+
+#content {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {text-align: center;}
+
+
+.flex-child {
+    flex: 1;	
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+
+
+.circle {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  border-radius: 50%; /* the magic */
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 auto 40px;
+}
+
+.blue {
+  background-color: #3498db;  
+}
+.green {
+  background-color: #16a085;
+}
+.red {
+  background-color: #e74c3c;
+}
+.feedback {
+  font-size: 14px;
+  color: #b1b1b1;
+}
+
+.cubestyling {
+  width: 200px;
+  height: 200px;
+  padding: 25px;
+}
+
+	
+	
+</style>
+</head>
+
+
+<body> 
+
+
+
+<h1>Click a box!</h1>
+<div id="content">
+  
+  <div><img class="flex-child cubestyling" src="cube.png" onclick="ow()"></div>
+  <div><img class="flex-child cubestyling" src="cube.png" onclick="ha()"></div>
+  
+</div>  
+
+
+	
+<audio id="ha" src="ha.wav" preload="auto">
+  Your browser does not support the <code>audio</code> element.
+</audio>
+
+<audio id="ow" src="ow.wav" preload="auto">
+  Your browser does not support the <code>audio</code> element.
+</audio>
+
+
+<script language="javascript">
+
+	function ha()
+	{
+      document.getElementById('ha').play();	
+	}
+
+
+	function ow()
+	{
+      document.getElementById('ow').play();	
+	}
+
+</script>	
+
+
+
+</body>
+
+
+
+
+
+
+	
+</html>
