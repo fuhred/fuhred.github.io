@@ -1,0 +1,89 @@
+/* css styles */
+
+div.quarto-about-trestles {
+    display: flex !important;
+    flex-direction: row;
+    padding-top: 3em !important;
+    padding-bottom: 1em
+}
+
+@media(min-width: 992px) {
+    div.quarto-about-trestles .about-entity .about-links {
+        flex-direction:row;
+        column-gap: 0em;
+        row-gap: 0px;
+        flex-wrap: wrap;
+    }
+}
+
+div.quarto-about-trestles .about-entity .about-link i.bi {
+    margin-right: .3em
+}
+
+div.quarto-about-trestles .about-entity .about-link {
+    color: #aaaeb1;
+    text-decoration: none;
+    border: solid 0px;
+}
+
+.quarto-grid-item div.post-contents {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    height: 100%;
+    background-color: #F8F9FA;
+}
+
+.quarto-grid-item .card-title {
+    margin-bottom: .6em;    
+    font-weight: 700;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    /*border-radius: 20px;    */
+    border: 1px solid hsl(0 0% 92% / 1);
+}
+
+.quarto-grid-item .card-text {
+    font-size: .9em;
+    display: none;
+}
+
+.quarto-grid-item .listing-categories .listing-category {
+    color: #6c757d;
+     border:solid 0px #dee2e6; 
+    /* border-radius: .25rem; */
+  
+    text-transform: uppercase;
+    font-size: 0.6em;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-top: .15em;
+    padding-bottom: .15em;
+    cursor: pointer;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    background-color: #eef1f0;
+
+}
+
+
+.quarto-grid-item .card-attribution {
+    padding-top: 0em;
+    display: flex;
+    gap: 1em;
+    text-transform: uppercase;
+    color: #6c757d;
+    font-weight: 500;
+    flex-grow: 10;
+    align-items: flex-end
+}
