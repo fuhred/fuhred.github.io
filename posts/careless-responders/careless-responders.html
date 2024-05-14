@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2023-11-21">
 
-<title>Fred Duong - Careless Responders</title>
+<title>Fred Duong - Research: Careless Responders</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../profile.png" rel="icon" type="image/png">
+<link href="../../profile4.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -112,12 +112,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Careless Responders</h1>
+<h1 class="title">Research: Careless Responders</h1>
   <div class="quarto-categories">
     <div class="quarto-category">research design</div>
     <div class="quarto-category">analysis</div>
     <div class="quarto-category">shiny</div>
     <div class="quarto-category">dataviz</div>
+    <div class="quarto-category">code</div>
   </div>
   </div>
 
@@ -141,18 +142,23 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>In this research, we examined several aspects of careless responding, responding that is not attentive to the content of the questions or items being administered.</p>
-<p>We find that experts have incorrect intuitions about the effects of careless responding and assume it deflates effects when in reality it mostly inflates effects, that published studies in high-impact journals often insufficiently screen for careless responding, and we demonstrate the inflationary effects of careless responding by re-examining published research. Furthermore, we provide an interactive web tool (a Shiny app) to explore and demonstrate careless responding examples in real time.</p>
-<p>My individual contributions to this research include study design, analysis, data visualization, tool development, writing, and editing. Here, I showcase two contributions: the Shiny app and an alluvial data visualization.</p>
+<p>This research examines several aspects of careless responding—responding that is not attentive to the content of the questions or items being administered.</p>
+<p><strong>Key takeaways</strong></p>
+<ol type="1">
+<li><p>On the whole, careless responding inflates effects rather than weakens them. Most researchers incorrectly assume the opposite, and in a survey of editors of leading psychology journals, we find that even these seasoned experts have incorrect intuitions.</p></li>
+<li><p>Published peer-reviewed studies in high-impact journals often insufficiently screen for careless responding.</p></li>
+<li><p>We provide an interactive web tool (a Shiny app) to explore and demonstrate careless responding examples in real time.</p></li>
+</ol>
+<p>I played a key role in this project, overseeing or contributing to study design, analysis, data visualization, tool development, writing, and editing. Here, I showcase two contributions: the Shiny app and an alluvial data visualization.</p>
 </section>
 <section id="shiny-app" class="level2">
 <h2 class="anchored" data-anchor-id="shiny-app">Shiny app</h2>
-<div class="quarto-figure quarto-figure-center" style="display:block; margin:auto;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="shiny.png" class="img-fluid figure-img" width="637"></p>
 </figure>
 </div>
-<p>This tool demonstrates in a live and interactive way how careless responding can affect correlations. While we spend considerable space in the article on the effects of careless responding, playing with the simulator tool makes the effects come alive. It especially highlights how easily careless responding can inflate effects. To program this, I used R/Shiny/ggplot2, and the full code is available on Github. Click on button to launch the tool in a separate window.</p>
+<p>While we write in the article on the effects of careless responding, this tool vividly demonstrates how careless responses can artificially inflate statistical correlations, providing an engaging, hands-on learning experience. To program this, I used R/Shiny/ggplot2, and the full code is available on <a href="https://github.com/fuhred/CarelessRespondingSimulator" style="a-text">Github</a>. Click on button to launch.</p>
 <div style="text-align: center;">
 <p><a href="https://fuhred.shinyapps.io/CarelessRespondingSimulator" class="btn btn-primary" role="button" target="_blank" style="margin:auto; display:inline-block; width: auto;">Launch the Shiny app</a></p>
 </div>
@@ -165,12 +171,12 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>My goal was to highlight the gap between the frequencies of good practices (stringent screening) and poor practices (less stringent or no screening). Alluvial plots are visualizations that are striking and beautiful. However, they are also often unclear, like visual puzzles that end up not communicating what is intended.</p>
-<p>Here, I designed a custom color palette to highlight differences, with brighter, more vivid colors for good careless responding practices. The colors emphasize that only a minority of published studies in high impact journals used sufficiently stringent screening. To make this, I used <a href="https://app.rawgraphs.io" target="_blank">RAWGraphs</a> to make the base figure and the vector illustrator program InkScape for color gradients and text editing.</p>
+<p>Here, I designed a custom color palette to highlight differences, with brighter, more vivid colors for good careless responding practices. The colors emphasize that only a minority of published studies in high impact journals used sufficiently stringent screening. To make this, I used <a href="https://app.rawgraphs.io" class="a-text" target="_blank">RAWGraphs</a> to make the base figure and the vector illustrator program InkScape for color gradients and text editing.</p>
 </section>
 <section id="the-peer-reviewed-article" class="level2">
 <h2 class="anchored" data-anchor-id="the-peer-reviewed-article">The Peer-Reviewed Article</h2>
-<p>To read more about this research, you can find the article here:</p>
-<p><a href="https://doi.org/10.1177/25152459241231581" target="_blank">Stosic, M. D., Murphy, B. A., Duong, F., Fultz, A. A., Harvey, S. E., &amp; Bernieri, F. (2024). Careless Responding: Why Many Findings Are Spurious or Spuriously Inflated.&nbsp;<em>Advances in Methods and Practices in Psychological Science</em>,&nbsp;<em>7</em>(1), 25152459241231581.</a></p>
+<p>For a deeper exploration of our findings and methodologies, the peer-reviewed article can be accessed in the journal <em>Advances in Methods and Practices in Psychological Science</em>:</p>
+<p><a href="https://doi.org/10.1177/25152459241231581" class="a-text" target="_blank">Stosic, M. D., Murphy, B. A., Duong, F., Fultz, A. A., Harvey, S. E., &amp; Bernieri, F. (2024). Careless Responding: Why Many Findings Are Spurious or Spuriously Inflated.&nbsp;<em>Advances in Methods and Practices in Psychological Science</em>,&nbsp;<em>7</em>(1), 25152459241231581.</a></p>
 <blockquote class="blockquote">
 <p>Abstract: Contrary to long-standing conventional wisdom, failing to exclude data from carelessly responding participants on questionnaires or behavioral tasks will frequently result in false-positive or spuriously inflated findings. Despite prior publications demonstrating this disturbing statistical confound, it continues to be widely underappreciated by most psychologists, including highly experienced journal editors. In this article, we aim to comprehensively explain and demonstrate the severity and widespread prevalence of careless responding’s (CR) inflationary effects in psychological research. We first describe when and why one can expect to observe the inflationary effect of unremoved CR data in a manner accessible to early graduate or advanced undergraduate students. To this end, we provide an online simulator tool and instructional videos for use in classrooms. We then illustrate realistic magnitudes of the severity of unremoved CR data by presenting novel reanalyses of data sets from three high-profile articles: We found that many of their published effects would have been meaningfully, sometimes dramatically, inflated if they had not rigorously screened out CR data. To demonstrate the frequency with which researchers fail to adequately screen for CR, we then conduct a systematic review of CR screening procedures in studies using paid online samples (e.g., MTurk) published across two prominent psychological-science journals. These findings suggest that most researchers either did not conduct any kind of CR screening or conducted only bare minimal screening. To help researchers avoid publishing spuriously inflated findings, we summarize best practices to help mitigate the threats of CR data.</p>
 </blockquote>
