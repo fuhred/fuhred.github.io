@@ -1,20 +1,15 @@
 /* css styles */
 
-div.quarto-about-trestles {
-    display: flex !important;
-    flex-direction: row;
-    padding-top: 3em !important;
-    padding-bottom: 1em
+.figure-img {
+    margin-bottom: 0rem; /* default is .5*/
 }
 
-@media(min-width: 992px) {
     div.quarto-about-trestles .about-entity .about-links {
         flex-direction:row;
-        column-gap: 0em;
+        column-gap: .8em;
         row-gap: 0px;
-        flex-wrap: wrap;
+        flex-wrap: wrap
     }
-}
 
 div.quarto-about-trestles .about-entity .about-link i.bi {
     margin-right: .3em
@@ -53,10 +48,6 @@ div.quarto-about-trestles .about-entity .about-link {
     border: 1px solid hsl(0 0% 92% / 1);
 }
 
-.quarto-grid-item .card-text {
-    font-size: .9em;
-    display: none;
-}
 
 .quarto-grid-item .listing-categories .listing-category {
     color: #6c757d;
@@ -87,3 +78,42 @@ div.quarto-about-trestles .about-entity .about-link {
     flex-grow: 10;
     align-items: flex-end
 }
+
+.circle-link {
+  display: inline-block; /* Or block, depending on layout needs */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.circle {
+  display: inline-block;        /* Aligns elements on the same line */
+  width: 35px;
+  height: 35px;
+  line-height: 36px; /* Keeps text aligned */
+  border-radius: 50%;
+  font-size: 17px; /* Adjust based on the actual size needed for icons */
+  color: #fff;
+  text-align: center;
+  background: #5c5c5c;
+  margin-right: 8px; /* Adds space between the icons */
+}
+
+.a-text {
+  color: black;              /* Sets text color to black */
+  transition: all 0.1s ease; /* Smooth transition for hover effects */
+  
+}
+
+.a-text:hover, .a-text:focus {
+  background-color: #DA91F9;   /* Background color changes to green on hover */
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.a-text:active {
+  background-color: #CC6AF7;   /* Keeps background green when the link is clicked */
+  color: black;              /* Optional: keeps text color white when active */
+}
+
+
