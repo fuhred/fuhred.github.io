@@ -4,84 +4,14 @@
     "href": "index.html",
     "title": "Fred Duong, Ph.D.",
     "section": "",
-    "text": "I am a mixed-methods researcher with a passion for delivering clear insights from complex research. I am skilled in advanced analytics, statistical programming, and data visualization. My favorite projects start with investigating messy constructs and end with compelling, data-driven narratives and beautiful visuals.\nI am an expert in emotions, morality, and political psychology, though I have wide-ranging interests that I investigate using social and personality psychology. My work spans nonprofit and academic sectors. I am currently a Research Fellow at More in Common and a Postdoctoral Fellow at University of Toronto Mississauga. For a sample of my research, programming and data visualization, check out my portfolio.\nI have a Ph.D. in psychology from Northeastern University, a M.A. in psychology from New York University, and a B.A. in sociology from University of North Texas."
+    "text": "I am a mixed-methods researcher with a passion for delivering clear insights from complex research. I am skilled in advanced analytics, statistical programming, and data visualization. My favorite projects start with investigating messy constructs (like emotions!) and end with compelling, data-driven narratives and beautiful visuals.\nI am an expert in emotions, morality, and political psychology, though I have wide-ranging interests that I investigate using social and personality psychology. My work spans nonprofit and academic sectors.\nI have a Ph.D in psychology from Northeastern University, a M.A. in psychology from New York University, and a B.A. in sociology from University of North Texas.\nCheck out my portfolio for a sample of my research, programming and data visualization."
   },
   {
-    "objectID": "posts/affective-polarization/affectivepolarization.html",
-    "href": "posts/affective-polarization/affectivepolarization.html",
-    "title": "Tutorial: Affective Polarization",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Portfolio",
     "section": "",
-    "text": "I wanted to recreate the figures from The Origins and Consequences of Affective Polarization in the United States (Iyengar et al., 2019) and Political Sectarianism in America (Finkel et al., 2020) shown below. They use American National Election Studies data to show how Affective Polarization has changed over time. This tutorial will not reproduce the figures exactly, but it will at least give you the base figure to work from to modify for your own purposes. This code uses tidy principles.\nIyengar et al., (2019)\nFinkel et al., (2020)"
-  },
-  {
-    "objectID": "posts/affective-polarization/affectivepolarization.html#simple-plot",
-    "href": "posts/affective-polarization/affectivepolarization.html#simple-plot",
-    "title": "Tutorial: Affective Polarization",
-    "section": "Simple plot",
-    "text": "Simple plot\n\ndf_p %&gt;% \n  ggplot(aes(x=VCF0004, y=Warmth, color=feeling)) +\n  geom_point() +\n  geom_line()"
-  },
-  {
-    "objectID": "posts/affective-polarization/affectivepolarization.html#simple-plot-2",
-    "href": "posts/affective-polarization/affectivepolarization.html#simple-plot-2",
-    "title": "Tutorial: Affective Polarization",
-    "section": "Simple plot 2",
-    "text": "Simple plot 2\nNot bad. Here’s the final version I ended up exporting as SVG so I can further play around with aesthetics in PowerPoint.\n\ndf_p %&gt;% \n  mutate(feeling=recode(feeling,\n                        inparty_feeling=\"Inparty Feeling\",\n                        outparty_feeling=\"Outparty Feeling\",\n                        )) %&gt;% \n  ggplot(aes(x=VCF0004, y=Warmth, color=feeling)) +\n  \n  geom_ribbon(\n    data=. %&gt;% group_by(VCF0004) %&gt;% rstatix::get_summary_stats(Warmth),\n    aes(ymin=min,ymax=max, y=mean, color=NULL),\n    fill=\"gray96\", show.legend = F)+  \n  \n  geom_hline(yintercept=50, color=\"gray\", linetype=\"dashed\")+\n  \n  geom_point(size=2.5) +\n  geom_line(size=1, show.legend = F) +\n\n  scale_x_continuous(breaks=seq(1980, 2020, by=4)) +\n  scale_y_continuous(limits=c(0,100),\n                     labels = paste0(seq(0, 100, by=25), \"°\")\n                     ) +\n  theme_minimal() +\n  theme(panel.grid.minor = element_blank(),\n        panel.grid.major = element_blank(),\n        axis.title.x = element_blank(),\n        axis.text.x = element_text(angle=45, hjust=1),\n        legend.title = element_blank()) +\n  labs(x=\"Election year\", y=\"Feeling thermometer rating\",\n       title=\"Affective Polarization Over Time Using ANES Data\")"
-  },
-  {
-    "objectID": "posts/affective-polarization/affectivepolarization.html#affective-polarization",
-    "href": "posts/affective-polarization/affectivepolarization.html#affective-polarization",
-    "title": "Tutorial: Affective Polarization",
-    "section": "Affective Polarization",
-    "text": "Affective Polarization\nLet’s add an affective polarization columns. Iyengar et al. (2019) calcualtes this as the difference between the feelings, whereas Finkel et al. (2020) calculates this as the difference between inparty love (inparty feeling - 50) and outparty hate (50 - outparty feeling). I’ll do both.\n\n# this is our earlier code, but i am re-running it because i reshaped it to be long\n# and we want wide format to do our calculations\ndf_p=\ndf %&gt;% \n  select(VCF0004, PID, inparty_feeling, outparty_feeling) %&gt;% \n  group_by(VCF0004) %&gt;% \n  summarise(inparty_feeling= mean(inparty_feeling,  na.rm=T),\n            outparty_feeling=mean(outparty_feeling, na.rm=T)\n            ) %&gt;% \n\n  #new code\n  rowwise() %&gt;% \n  mutate(aff_polar_iyengar=inparty_feeling-outparty_feeling,\n         aff_polar_finkel = (inparty_feeling-50)-(50-outparty_feeling)\n         )\n\n\ndf_p %&gt;% head\n\n# A tibble: 6 × 5\n# Rowwise: \n  VCF0004 inparty_feeling outparty_feeling aff_polar_iyengar aff_polar_finkel\n    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt;            &lt;dbl&gt;\n1    1978            73.9             47.0              26.9             20.8\n2    1980            75.0             45.6              29.4             20.6\n3    1982            76.2             43.4              32.8             19.6\n4    1984            76.8             44.9              31.9             21.7\n5    1986            76.4             45.1              31.3             21.5\n6    1988            77.6             44.0              33.7             21.6\n\n\nLet’s see if we can’t reproduce each figure more closely. In my experience the fine details require a lot of extra code, so this will only roughly approximate what the figures show.\nHere’s the Iyengar reproduction."
-  },
-  {
-    "objectID": "posts/affective-polarization/affectivepolarization.html#iyengar-et-al.-2019",
-    "href": "posts/affective-polarization/affectivepolarization.html#iyengar-et-al.-2019",
-    "title": "Tutorial: Affective Polarization",
-    "section": "Iyengar et al. (2019)",
-    "text": "Iyengar et al. (2019)\n\ndf_p %&gt;% \n  \n  select(-aff_polar_finkel) %&gt;%  #we just want iyengar's aff polar\n  \n  #reshape\n  pivot_longer(-VCF0004, names_to=\"feeling\", values_to=\"Warmth\") %&gt;% \n  \n  \n  mutate(feeling=recode(feeling,\n                        inparty_feeling=\"In-party feeling\",\n                        outparty_feeling=\"Out-party feeling\",\n                        aff_polar_iyengar=\"Affective polarization\"\n                        ),\n         feeling=factor(feeling, levels=c(\"In-party feeling\",   #setting levels just so ordering colors/shapes\n                                          \"Out-party feeling\",  #is more intuitive. otherwise, ggplot orders this\n                                          \"Affective polarization\" #alphabetically\n                                          ))\n         ) %&gt;%   \n  \n  \n  #plot\n  ggplot(aes(x=VCF0004, y=Warmth, color=feeling)) +\n  geom_hline(yintercept=50, color=\"gray\", linetype=\"dashed\")+\n  geom_point(aes(shape=feeling, fill=feeling), size=2) +\n  geom_line(aes(linetype=feeling)) +\n  scale_x_continuous(breaks=seq(1980, 2020, by=4)) +\n  scale_y_continuous(limits=c(0,100),\n                     labels = paste0(seq(0, 100, by=25), \"°\")\n                     ) +  \n  theme_bw() +\n  theme(panel.grid = element_blank(),\n        # axis.text.x = element_text(angle=45, hjust=1),\n        legend.title = element_blank(),\n        axis.ticks.length=unit(-0.15, \"cm\") #flip this ticks inside\n        ) +\n  labs(x=\"Election year\", y=\"Feeling thermometer rating\",\n       title=\"Affective Polarization - Iyengar et al. (2019) reproduction\") +\n  \n  #use Iyengar's colors. You can use a color picker to sample colors from images and get the hex code\n  #I use Color Cop for Windows (free)\n  scale_color_manual(values=c(\"#1D9E74\", #green\n                              \"#AD6FAE\", #purple\n                              \"#6C6D70\"  #gray\n                              )) +\n  scale_fill_manual(values=c(\"#1D9E74\", #green\n                              \"#AD6FAE\", #purple\n                              \"#6C6D70\"  #gray\n                              )) +\n  \n  scale_shape_manual(values=c(19, #circle\n                              15, #square\n                              23  #diamond\n                              )) +\n  scale_linetype_manual(values=c(\"dotted\",\"dashed\",\"solid\"))\n\n\n\n  #Note: it seems like making a gradient background is not straightforward in ggplot\n  #I would just export this as SVG and then make a gradient in another program"
-  },
-  {
-    "objectID": "posts/affective-polarization/affectivepolarization.html#finkel-et-al.-2020",
-    "href": "posts/affective-polarization/affectivepolarization.html#finkel-et-al.-2020",
-    "title": "Tutorial: Affective Polarization",
-    "section": "Finkel et al. (2020)",
-    "text": "Finkel et al. (2020)\nThis figure is interesting because it’s actually two figures: feeling thermometers on top and affective polarization on bottom.\n\n\nTop figure\n\ndf_p %&gt;% \n  \n  select(-aff_polar_iyengar, -aff_polar_finkel) %&gt;%  #we just want iyengar's aff polar\n  \n  #reshape\n  pivot_longer(-VCF0004, names_to=\"feeling\", values_to=\"Warmth\") %&gt;% \n  \n  \n  mutate(feeling=recode(feeling,\n                        inparty_feeling=\"In-party feeling\",\n                        outparty_feeling=\"Out-party feeling\",\n                        aff_polar_finkel=\"Affective polarization\"\n                        ),\n         feeling=factor(feeling, levels=c(\"In-party feeling\",   #setting levels just so ordering colors/shapes\n                                          \"Out-party feeling\",  #is more intuitive. otherwise, ggplot orders this\n                                          \"Affective polarization\" #alphabetically\n                                          ))\n         ) %&gt;%   \n  \n  \n  #plot\n  ggplot(aes(x=VCF0004, y=Warmth, color=feeling)) +\n  geom_hline(yintercept=50, color=\"black\")+\n  geom_smooth(aes(group=feeling,color=NULL, linetype=feeling),\n              method=lm, se=F, color=\"black\", size=.75)+\n  geom_point(aes(shape=feeling, fill=feeling), size=2) +\n  # geom_line(aes(linetype=feeling)) +\n  scale_x_continuous(breaks=seq(1980, 2020, by=4)\n                     ) +\n  scale_y_continuous(limits=c(0,100),\n                     labels = paste0(seq(0, 100, by=25), \"°\")\n                     ) +  \n  theme_classic() +\n  theme(panel.grid = element_blank(),\n        legend.title = element_blank(),\n        panel.border = element_blank()\n        ) +\n  labs(x=\"Election year\", y=\"Feeling thermometer ratings\",\n       title=\"Affective Polarization - Finkel et al. (2020) reproduction\") +\n  \n  #use Iyengar's colors. You can use a color picker to sample colors from images and get the hex code\n  #I use Color Cop for Windows (free)\n  scale_color_manual(values=c(\"#D8631B\", \n                              \"#00AEAE\", #purple\n                              \"#6C6D70\"  #gray\n                              )) +\n  scale_fill_manual(values=c(\"#1D9E74\", #green\n                              \"#AD6FAE\", #purple\n                              \"#6C6D70\"  #gray\n                              )) +\n  \n  scale_shape_manual(values=c(15, #square\n                              17, #circle\n                              \n                              15  #diamond\n                              )) +\n  scale_linetype_manual(values=c(\"solid\",\"dashed\",\"solid\"))\n\n\n\n\n\n\nBottom figure\n\ndf_p %&gt;% \n  \n  select(VCF0004, aff_polar_finkel) %&gt;%  #\n  pivot_longer(-VCF0004, names_to=\"feeling\", values_to=\"Warmth\") %&gt;%   #reshape\n  \n  mutate(feeling=recode(feeling,\n                        aff_polar_finkel=\"Affective polarization\"\n                        )) %&gt;%   \n  \n  #plot\n  ggplot(aes(x=VCF0004, y=Warmth)) +\n  geom_hline(yintercept=0, color=\"black\")+\n  geom_line()+\n  geom_point(shape=15, size=2) +\n  scale_x_continuous(breaks=seq(1980, 2020, by=4)) +\n  scale_y_continuous(limits=c(-15, 25),\n                     breaks=seq(-15, 25, by=5),\n                     labels = paste0(seq(-15, 25, by=5), \"°\")\n                     ) +\n  theme_classic() +\n  theme(panel.grid = element_blank(),\n        legend.title = element_blank(),\n        panel.border = element_blank(),\n        axis.title.x = element_blank()\n        ) +\n  labs(x=\"Election year\", y=\"In-party love - Out-party hate\",\n       title=\"Affective Polarization - Finkel et al. (2020)\")"
-  },
-  {
-    "objectID": "posts/careless-responders/careless-responders.html",
-    "href": "posts/careless-responders/careless-responders.html",
-    "title": "Research: Careless Responders",
-    "section": "",
-    "text": "This research examines several aspects of careless responding—responding that is not attentive to the content of the questions or items being administered.\nKey takeaways\n\nOn the whole, careless responding inflates effects rather than weakens them. Most researchers incorrectly assume the opposite, and in a survey of editors of leading psychology journals, we find that even these seasoned experts have incorrect intuitions.\nPublished peer-reviewed studies in high-impact journals often insufficiently screen for careless responding.\nWe provide an interactive web tool (a Shiny app) to explore and demonstrate careless responding examples in real time.\n\nI played a key role in this project, overseeing or contributing to study design, analysis, data visualization, tool development, writing, and editing. Here, I showcase two contributions: the Shiny app and an alluvial data visualization."
-  },
-  {
-    "objectID": "posts/careless-responders/careless-responders.html#overview",
-    "href": "posts/careless-responders/careless-responders.html#overview",
-    "title": "Research: Careless Responders",
-    "section": "",
-    "text": "This research examines several aspects of careless responding—responding that is not attentive to the content of the questions or items being administered.\nKey takeaways\n\nOn the whole, careless responding inflates effects rather than weakens them. Most researchers incorrectly assume the opposite, and in a survey of editors of leading psychology journals, we find that even these seasoned experts have incorrect intuitions.\nPublished peer-reviewed studies in high-impact journals often insufficiently screen for careless responding.\nWe provide an interactive web tool (a Shiny app) to explore and demonstrate careless responding examples in real time.\n\nI played a key role in this project, overseeing or contributing to study design, analysis, data visualization, tool development, writing, and editing. Here, I showcase two contributions: the Shiny app and an alluvial data visualization."
-  },
-  {
-    "objectID": "posts/careless-responders/careless-responders.html#shiny-app",
-    "href": "posts/careless-responders/careless-responders.html#shiny-app",
-    "title": "Research: Careless Responders",
-    "section": "Shiny app",
-    "text": "Shiny app\n\n\n\n\n\nWhile we write in the article on the effects of careless responding, this tool vividly demonstrates how careless responses can artificially inflate statistical correlations, providing an engaging, hands-on learning experience. To program this, I used R/Shiny/ggplot2, and the full code is available on Github. Click on button to launch.\n\nLaunch the Shiny app"
-  },
-  {
-    "objectID": "posts/careless-responders/careless-responders.html#alluvial-figure",
-    "href": "posts/careless-responders/careless-responders.html#alluvial-figure",
-    "title": "Research: Careless Responders",
-    "section": "Alluvial figure",
-    "text": "Alluvial figure\n\n\n\n\n\nMy goal was to highlight the gap between the frequencies of good practices (stringent screening) and poor practices (less stringent or no screening). Alluvial plots are visualizations that are striking and beautiful. However, they are also often unclear, like visual puzzles that end up not communicating what is intended.\nHere, I designed a custom color palette to highlight differences, with brighter, more vivid colors for good careless responding practices. The colors emphasize that only a minority of published studies in high impact journals used sufficiently stringent screening. To make this, I used RAWGraphs to make the base figure and the vector illustrator program InkScape for color gradients and text editing."
-  },
-  {
-    "objectID": "posts/careless-responders/careless-responders.html#the-peer-reviewed-article",
-    "href": "posts/careless-responders/careless-responders.html#the-peer-reviewed-article",
-    "title": "Research: Careless Responders",
-    "section": "The Peer-Reviewed Article",
-    "text": "The Peer-Reviewed Article\nFor a deeper exploration of our findings and methodologies, the peer-reviewed article can be accessed in the journal Advances in Methods and Practices in Psychological Science:\nStosic, M. D., Murphy, B. A., Duong, F., Fultz, A. A., Harvey, S. E., & Bernieri, F. (2024). Careless Responding: Why Many Findings Are Spurious or Spuriously Inflated. Advances in Methods and Practices in Psychological Science, 7(1), 25152459241231581.\n\nAbstract: Contrary to long-standing conventional wisdom, failing to exclude data from carelessly responding participants on questionnaires or behavioral tasks will frequently result in false-positive or spuriously inflated findings. Despite prior publications demonstrating this disturbing statistical confound, it continues to be widely underappreciated by most psychologists, including highly experienced journal editors. In this article, we aim to comprehensively explain and demonstrate the severity and widespread prevalence of careless responding’s (CR) inflationary effects in psychological research. We first describe when and why one can expect to observe the inflationary effect of unremoved CR data in a manner accessible to early graduate or advanced undergraduate students. To this end, we provide an online simulator tool and instructional videos for use in classrooms. We then illustrate realistic magnitudes of the severity of unremoved CR data by presenting novel reanalyses of data sets from three high-profile articles: We found that many of their published effects would have been meaningfully, sometimes dramatically, inflated if they had not rigorously screened out CR data. To demonstrate the frequency with which researchers fail to adequately screen for CR, we then conduct a systematic review of CR screening procedures in studies using paid online samples (e.g., MTurk) published across two prominent psychological-science journals. These findings suggest that most researchers either did not conduct any kind of CR screening or conducted only bare minimal screening. To help researchers avoid publishing spuriously inflated findings, we summarize best practices to help mitigate the threats of CR data."
+    "text": "Dataviz: Redemption Research Poster\n\n\n\nanalysis\n\n\ndataviz\n\n\n\n\n\n\n\n\n\n\nFeb 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCareless Responders\n\n\n\nresearch design\n\n\nanalysis\n\n\nshiny\n\n\ndataviz\n\n\n\n\n\n\n\n\n\n\nNov 21, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial: Dumbbell Chart with a Gap Column\n\n\n\ndataviz\n\n\ntutorial\n\n\ncode\n\n\n\n\n\n\n\n\n\n\nMar 23, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial: Affective Polarization\n\n\n\nanalysis\n\n\ndataviz\n\n\ntutorial\n\n\ncode\n\n\n\n\n\n\n\n\n\n\nMar 15, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultiracial Counties in the US\n\n\n\nanalysis\n\n\ndataviz\n\n\nspatial\n\n\n\n\n\n\n\n\n\n\nAug 9, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShinyApp: Pseudonym Generator\n\n\n\nshiny\n\n\n\n\n\n\n\n\n\n\nJun 9, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataviz: Empathic People Research Poster\n\n\n\nanalysis\n\n\ndataviz\n\n\n\n\n\n\n\n\n\n\nFeb 21, 2020\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/dumbbell-with-gap/dumbbell.html",
@@ -133,13 +63,6 @@
     "text": "Combine Figures\nUse the package patchwork to put together your final figure. You’ll need to play around with plot_layout() a bit to get your figures to fit together how you want.\n\np_whole=\n  # syntax from `patchwork`\n  p_main + p_gap + plot_layout(design=\n  c(\n    area(l=0,  r=45, t=0, b=1), # defines the main figure area\n    area(l=46, r=52, t=0, b=1)  # defines the gap figure area\n  )) \n\np_whole"
   },
   {
-    "objectID": "posts/empathic-people-poster/empathic-people-poster.html",
-    "href": "posts/empathic-people-poster/empathic-people-poster.html",
-    "title": "Dataviz: Empathic People Research Poster",
-    "section": "",
-    "text": "Objective\nPresent the findings of a research project on various measures of empathy and their correlates, allowing for an intuitive visual comparison of how different empathies are correlated with key personality traits. Format was a 48” x 36” poster that was presented at the 2020 Annual Conference for the Society of Personality and Social Psychology.\nApproach\nEmployed a multi-dimensional visualization strategy using radar charts to depict the relationship between various empathy definitions and personality traits. This approach helped in highlighting the nuances between different scholarly interpretations of empathy and their psychological profiles.\nTools Used\nR and ggplot (using custom functions) were used to create detailed radar charts. This allowed for a clear, visual summary of complex multi-trait data, making the information accessible and engaging for viewers. Final design was created in PowerPoint."
-  },
-  {
     "objectID": "posts/multiracial-usa/multiracial-usa.html",
     "href": "posts/multiracial-usa/multiracial-usa.html",
     "title": "Multiracial Counties in the US",
@@ -147,164 +70,101 @@
     "text": "Figure is made with R for the data and with Photoshop for the data callouts."
   },
   {
+    "objectID": "posts/redemption-poster/redemption-poster.html",
+    "href": "posts/redemption-poster/redemption-poster.html",
+    "title": "Dataviz: Redemption Research Poster",
+    "section": "",
+    "text": "A 48” x 36” research poster for the Morality Preconference for the 2024 Annual Conference for the Society of Personality and Social Psychology.\nAnalysis and figures done with R. Design done with Powerpoint."
+  },
+  {
+    "objectID": "posts/empathic-people-poster/empathic-people-poster.html",
+    "href": "posts/empathic-people-poster/empathic-people-poster.html",
+    "title": "Dataviz: Empathic People Research Poster",
+    "section": "",
+    "text": "A poster presentation for the 2020 Annual Conference for the Society of Personality and Social Psychology."
+  },
+  {
+    "objectID": "posts/affective-polarization/affectivepolarization.html",
+    "href": "posts/affective-polarization/affectivepolarization.html",
+    "title": "Tutorial: Affective Polarization",
+    "section": "",
+    "text": "I wanted to recreate the figures from The Origins and Consequences of Affective Polarization in the United States (Iyengar et al., 2019) and Political Sectarianism in America (Finkel et al., 2020) shown below. They use American National Election Studies data to show how Affective Polarization has changed over time. This tutorial will not reproduce the figures exactly, but it will at least give you the base figure to work from to modify for your own purposes. This code uses tidy principles.\nIyengar et al., (2019)\nFinkel et al., (2020)"
+  },
+  {
+    "objectID": "posts/affective-polarization/affectivepolarization.html#simple-plot",
+    "href": "posts/affective-polarization/affectivepolarization.html#simple-plot",
+    "title": "Tutorial: Affective Polarization",
+    "section": "Simple plot",
+    "text": "Simple plot\n\ndf_p %&gt;% \n  ggplot(aes(x=VCF0004, y=Warmth, color=feeling)) +\n  geom_point() +\n  geom_line()"
+  },
+  {
+    "objectID": "posts/affective-polarization/affectivepolarization.html#simple-plot-2",
+    "href": "posts/affective-polarization/affectivepolarization.html#simple-plot-2",
+    "title": "Tutorial: Affective Polarization",
+    "section": "Simple plot 2",
+    "text": "Simple plot 2\nNot bad. Here’s the final version I ended up exporting as SVG so I can further play around with aesthetics in PowerPoint.\n\ndf_p %&gt;% \n  mutate(feeling=recode(feeling,\n                        inparty_feeling=\"Inparty Feeling\",\n                        outparty_feeling=\"Outparty Feeling\",\n                        )) %&gt;% \n  ggplot(aes(x=VCF0004, y=Warmth, color=feeling)) +\n  \n  geom_ribbon(\n    data=. %&gt;% group_by(VCF0004) %&gt;% rstatix::get_summary_stats(Warmth),\n    aes(ymin=min,ymax=max, y=mean, color=NULL),\n    fill=\"gray96\", show.legend = F)+  \n  \n  geom_hline(yintercept=50, color=\"gray\", linetype=\"dashed\")+\n  \n  geom_point(size=2.5) +\n  geom_line(size=1, show.legend = F) +\n\n  scale_x_continuous(breaks=seq(1980, 2020, by=4)) +\n  scale_y_continuous(limits=c(0,100),\n                     labels = paste0(seq(0, 100, by=25), \"°\")\n                     ) +\n  theme_minimal() +\n  theme(panel.grid.minor = element_blank(),\n        panel.grid.major = element_blank(),\n        axis.title.x = element_blank(),\n        axis.text.x = element_text(angle=45, hjust=1),\n        legend.title = element_blank()) +\n  labs(x=\"Election year\", y=\"Feeling thermometer rating\",\n       title=\"Affective Polarization Over Time Using ANES Data\")"
+  },
+  {
+    "objectID": "posts/affective-polarization/affectivepolarization.html#affective-polarization",
+    "href": "posts/affective-polarization/affectivepolarization.html#affective-polarization",
+    "title": "Tutorial: Affective Polarization",
+    "section": "Affective Polarization",
+    "text": "Affective Polarization\nLet’s add an affective polarization columns. Iyengar et al. (2019) calcualtes this as the difference between the feelings, whereas Finkel et al. (2020) calculates this as the difference between inparty love (inparty feeling - 50) and outparty hate (50 - outparty feeling). I’ll do both.\n\n# this is our earlier code, but i am re-running it because i reshaped it to be long\n# and we want wide format to do our calculations\ndf_p=\ndf %&gt;% \n  select(VCF0004, PID, inparty_feeling, outparty_feeling) %&gt;% \n  group_by(VCF0004) %&gt;% \n  summarise(inparty_feeling= mean(inparty_feeling,  na.rm=T),\n            outparty_feeling=mean(outparty_feeling, na.rm=T)\n            ) %&gt;% \n\n  #new code\n  rowwise() %&gt;% \n  mutate(aff_polar_iyengar=inparty_feeling-outparty_feeling,\n         aff_polar_finkel = (inparty_feeling-50)-(50-outparty_feeling)\n         )\n\n\ndf_p %&gt;% head\n\n# A tibble: 6 × 5\n# Rowwise: \n  VCF0004 inparty_feeling outparty_feeling aff_polar_iyengar aff_polar_finkel\n    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt;            &lt;dbl&gt;\n1    1978            73.9             47.0              26.9             20.8\n2    1980            75.0             45.6              29.4             20.6\n3    1982            76.2             43.4              32.8             19.6\n4    1984            76.8             44.9              31.9             21.7\n5    1986            76.4             45.1              31.3             21.5\n6    1988            77.6             44.0              33.7             21.6\n\n\nLet’s see if we can’t reproduce each figure more closely. In my experience the fine details require a lot of extra code, so this will only roughly approximate what the figures show.\nHere’s the Iyengar reproduction."
+  },
+  {
+    "objectID": "posts/affective-polarization/affectivepolarization.html#iyengar-et-al.-2019",
+    "href": "posts/affective-polarization/affectivepolarization.html#iyengar-et-al.-2019",
+    "title": "Tutorial: Affective Polarization",
+    "section": "Iyengar et al. (2019)",
+    "text": "Iyengar et al. (2019)\n\ndf_p %&gt;% \n  \n  select(-aff_polar_finkel) %&gt;%  #we just want iyengar's aff polar\n  \n  #reshape\n  pivot_longer(-VCF0004, names_to=\"feeling\", values_to=\"Warmth\") %&gt;% \n  \n  \n  mutate(feeling=recode(feeling,\n                        inparty_feeling=\"In-party feeling\",\n                        outparty_feeling=\"Out-party feeling\",\n                        aff_polar_iyengar=\"Affective polarization\"\n                        ),\n         feeling=factor(feeling, levels=c(\"In-party feeling\",   #setting levels just so ordering colors/shapes\n                                          \"Out-party feeling\",  #is more intuitive. otherwise, ggplot orders this\n                                          \"Affective polarization\" #alphabetically\n                                          ))\n         ) %&gt;%   \n  \n  \n  #plot\n  ggplot(aes(x=VCF0004, y=Warmth, color=feeling)) +\n  geom_hline(yintercept=50, color=\"gray\", linetype=\"dashed\")+\n  geom_point(aes(shape=feeling, fill=feeling), size=2) +\n  geom_line(aes(linetype=feeling)) +\n  scale_x_continuous(breaks=seq(1980, 2020, by=4)) +\n  scale_y_continuous(limits=c(0,100),\n                     labels = paste0(seq(0, 100, by=25), \"°\")\n                     ) +  \n  theme_bw() +\n  theme(panel.grid = element_blank(),\n        # axis.text.x = element_text(angle=45, hjust=1),\n        legend.title = element_blank(),\n        axis.ticks.length=unit(-0.15, \"cm\") #flip this ticks inside\n        ) +\n  labs(x=\"Election year\", y=\"Feeling thermometer rating\",\n       title=\"Affective Polarization - Iyengar et al. (2019) reproduction\") +\n  \n  #use Iyengar's colors. You can use a color picker to sample colors from images and get the hex code\n  #I use Color Cop for Windows (free)\n  scale_color_manual(values=c(\"#1D9E74\", #green\n                              \"#AD6FAE\", #purple\n                              \"#6C6D70\"  #gray\n                              )) +\n  scale_fill_manual(values=c(\"#1D9E74\", #green\n                              \"#AD6FAE\", #purple\n                              \"#6C6D70\"  #gray\n                              )) +\n  \n  scale_shape_manual(values=c(19, #circle\n                              15, #square\n                              23  #diamond\n                              )) +\n  scale_linetype_manual(values=c(\"dotted\",\"dashed\",\"solid\"))\n\n\n\n  #Note: it seems like making a gradient background is not straightforward in ggplot\n  #I would just export this as SVG and then make a gradient in another program"
+  },
+  {
+    "objectID": "posts/affective-polarization/affectivepolarization.html#finkel-et-al.-2020",
+    "href": "posts/affective-polarization/affectivepolarization.html#finkel-et-al.-2020",
+    "title": "Tutorial: Affective Polarization",
+    "section": "Finkel et al. (2020)",
+    "text": "Finkel et al. (2020)\nThis figure is interesting because it’s actually two figures: feeling thermometers on top and affective polarization on bottom.\n\n\nTop figure\n\ndf_p %&gt;% \n  \n  select(-aff_polar_iyengar, -aff_polar_finkel) %&gt;%  #we just want iyengar's aff polar\n  \n  #reshape\n  pivot_longer(-VCF0004, names_to=\"feeling\", values_to=\"Warmth\") %&gt;% \n  \n  \n  mutate(feeling=recode(feeling,\n                        inparty_feeling=\"In-party feeling\",\n                        outparty_feeling=\"Out-party feeling\",\n                        aff_polar_finkel=\"Affective polarization\"\n                        ),\n         feeling=factor(feeling, levels=c(\"In-party feeling\",   #setting levels just so ordering colors/shapes\n                                          \"Out-party feeling\",  #is more intuitive. otherwise, ggplot orders this\n                                          \"Affective polarization\" #alphabetically\n                                          ))\n         ) %&gt;%   \n  \n  \n  #plot\n  ggplot(aes(x=VCF0004, y=Warmth, color=feeling)) +\n  geom_hline(yintercept=50, color=\"black\")+\n  geom_smooth(aes(group=feeling,color=NULL, linetype=feeling),\n              method=lm, se=F, color=\"black\", size=.75)+\n  geom_point(aes(shape=feeling, fill=feeling), size=2) +\n  # geom_line(aes(linetype=feeling)) +\n  scale_x_continuous(breaks=seq(1980, 2020, by=4)\n                     ) +\n  scale_y_continuous(limits=c(0,100),\n                     labels = paste0(seq(0, 100, by=25), \"°\")\n                     ) +  \n  theme_classic() +\n  theme(panel.grid = element_blank(),\n        legend.title = element_blank(),\n        panel.border = element_blank()\n        ) +\n  labs(x=\"Election year\", y=\"Feeling thermometer ratings\",\n       title=\"Affective Polarization - Finkel et al. (2020) reproduction\") +\n  \n  #use Iyengar's colors. You can use a color picker to sample colors from images and get the hex code\n  #I use Color Cop for Windows (free)\n  scale_color_manual(values=c(\"#D8631B\", \n                              \"#00AEAE\", #purple\n                              \"#6C6D70\"  #gray\n                              )) +\n  scale_fill_manual(values=c(\"#1D9E74\", #green\n                              \"#AD6FAE\", #purple\n                              \"#6C6D70\"  #gray\n                              )) +\n  \n  scale_shape_manual(values=c(15, #square\n                              17, #circle\n                              \n                              15  #diamond\n                              )) +\n  scale_linetype_manual(values=c(\"solid\",\"dashed\",\"solid\"))\n\n\n\n\n\n\nBottom figure\n\ndf_p %&gt;% \n  \n  select(VCF0004, aff_polar_finkel) %&gt;%  #\n  pivot_longer(-VCF0004, names_to=\"feeling\", values_to=\"Warmth\") %&gt;%   #reshape\n  \n  mutate(feeling=recode(feeling,\n                        aff_polar_finkel=\"Affective polarization\"\n                        )) %&gt;%   \n  \n  #plot\n  ggplot(aes(x=VCF0004, y=Warmth)) +\n  geom_hline(yintercept=0, color=\"black\")+\n  geom_line()+\n  geom_point(shape=15, size=2) +\n  scale_x_continuous(breaks=seq(1980, 2020, by=4)) +\n  scale_y_continuous(limits=c(-15, 25),\n                     breaks=seq(-15, 25, by=5),\n                     labels = paste0(seq(-15, 25, by=5), \"°\")\n                     ) +\n  theme_classic() +\n  theme(panel.grid = element_blank(),\n        legend.title = element_blank(),\n        panel.border = element_blank(),\n        axis.title.x = element_blank()\n        ) +\n  labs(x=\"Election year\", y=\"In-party love - Out-party hate\",\n       title=\"Affective Polarization - Finkel et al. (2020)\")"
+  },
+  {
     "objectID": "posts/pseudonym-generator/pseudonym-generator.html",
     "href": "posts/pseudonym-generator/pseudonym-generator.html",
     "title": "ShinyApp: Pseudonym Generator",
     "section": "",
-    "text": "Preview Image\nLaunch the ShinyApp"
+    "text": "Preview Image\n\n\nLaunch the ShinyApp\nA pseudonym generator programmed in Shiny. Use it to anonymize quotes but still reflect the gender and relative age of participants."
   },
   {
-    "objectID": "posts/redemption-poster/redemption-poster.html",
-    "href": "posts/redemption-poster/redemption-poster.html",
-    "title": "Dataviz: “A Recipe for Redemption” Research Poster",
+    "objectID": "posts/careless-responders/careless-responders.html",
+    "href": "posts/careless-responders/careless-responders.html",
+    "title": "Careless Responders",
     "section": "",
-    "text": "Objective\nCommunicate the results of a research project that spanned six studies in a 48” x 36” research poster. Presented at the Morality Preconference for the 2024 Annual Conference for the Society of Personality and Social Psychology.\nApproach\nThe typical research poster has a three-column design, which works well for a one-study design. But I had six. Given that I had many studies to present, I bucketed the studies into two overarching research questins. I was also inspired by the thin columns of newspapers, like the New York Times layout. I used a five column layout, but was flexible with how content straddle the columsn. Both the title and some of the figures straddle two columns.\nTools\nAnalysis and figures done with R. Design done with Powerpoint."
+    "text": "In this research, we examined several aspects of careless responding, responding that is not attentive to the content of the questions or items being administered.\nWe find that experts have incorrect intuitions about the effects of careless responding and assume it deflates effects when in reality it mostly inflates effects, that published studies in high-impact journals often insufficiently screen for careless responding, and we demonstrate the inflationary effects of careless responding by re-examining published research. Furthermore, we provide an interactive web tool (a Shiny app) to explore and demonstrate careless responding examples in real time.\nMy individual contributions to this research include study design, analysis, data visualization, tool development, writing, and editing. Here, I showcase two contributions: the Shiny app and an alluvial data visualization."
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Portfolio",
+    "objectID": "posts/careless-responders/careless-responders.html#overview",
+    "href": "posts/careless-responders/careless-responders.html#overview",
+    "title": "Careless Responders",
     "section": "",
-    "text": "Dataviz: “A Recipe for Redemption” Research Poster\n\n\n\n\n\n\nFeb 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: Careless Responders\n\n\n\n\n\n\nNov 21, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: Free Speech and Inclusion\n\n\n\n\n\n\nSep 23, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: IDEA Climate Survey 2022-2023\n\n\n\n\n\n\nJul 21, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial: Dumbbell Chart with a Gap Column\n\n\n\n\n\n\nMar 23, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial: Affective Polarization\n\n\n\n\n\n\nMar 15, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultiracial Counties in the US\n\n\n\n\n\n\nAug 9, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShinyApp: Pseudonym Generator\n\n\n\n\n\n\nJun 9, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataviz: “Who Are Empathic People?” Research Poster\n\n\n\n\n\n\nFeb 21, 2020\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "In this research, we examined several aspects of careless responding, responding that is not attentive to the content of the questions or items being administered.\nWe find that experts have incorrect intuitions about the effects of careless responding and assume it deflates effects when in reality it mostly inflates effects, that published studies in high-impact journals often insufficiently screen for careless responding, and we demonstrate the inflationary effects of careless responding by re-examining published research. Furthermore, we provide an interactive web tool (a Shiny app) to explore and demonstrate careless responding examples in real time.\nMy individual contributions to this research include study design, analysis, data visualization, tool development, writing, and editing. Here, I showcase two contributions: the Shiny app and an alluvial data visualization."
   },
   {
-    "objectID": "posts/redemption-poster/redemption-poster.html#objective",
-    "href": "posts/redemption-poster/redemption-poster.html#objective",
-    "title": "Dataviz: “A Recipe for Redemption” Research Poster",
-    "section": "Objective",
-    "text": "Objective\nPresent the findings from a comprehensive six-study research project on moral redemption through a detailed and engaging 48” x 36” poster at the Morality Preconference for the 2024 Annual Conference of the Society for Personality and Social Psychology."
+    "objectID": "posts/careless-responders/careless-responders.html#shiny-app",
+    "href": "posts/careless-responders/careless-responders.html#shiny-app",
+    "title": "Careless Responders",
+    "section": "Shiny app",
+    "text": "Shiny app\n\n\n\n\n\nThis tool demonstrates in a live and interactive way how careless responding can affect correlations. While we spend considerable space in the article on the effects of careless responding, playing with the simulator tool makes the effects come alive. It especially highlights how easily careless responding can inflate effects. To program this, I used R/Shiny/ggplot2, and the full code is available on Github. Click on button to launch the tool in a separate window.\n\nLaunch the Shiny app"
   },
   {
-    "objectID": "posts/redemption-poster/redemption-poster.html#approach",
-    "href": "posts/redemption-poster/redemption-poster.html#approach",
-    "title": "Dataviz: “A Recipe for Redemption” Research Poster",
-    "section": "Approach",
-    "text": "Approach\nMost research posters are three-columns. I adopted an unique five-column layout inspired by the design of newspapers to manage the extensive data from multiple studies effectively. This layout facilitated structured storytelling and highlighted key findings—organized by two overarching research questions—across the broader themes of the research, enhancing viewer engagement and understanding."
+    "objectID": "posts/careless-responders/careless-responders.html#alluvial-figure",
+    "href": "posts/careless-responders/careless-responders.html#alluvial-figure",
+    "title": "Careless Responders",
+    "section": "Alluvial figure",
+    "text": "Alluvial figure\n\n\n\n\n\nMy goal was to highlight the gap between the frequencies of good practices (stringent screening) and poor practices (less stringent or no screening). Alluvial plots are visualizations that are striking and beautiful. However, they are also often unclear, like visual puzzles that end up not communicating what is intended.\nHere, I designed a custom color palette to highlight differences, with brighter, more vivid colors for good careless responding practices. The colors emphasize that only a minority of published studies in high impact journals used sufficiently stringent screening. To make this, I used RAWGraphs to make the base figure and the vector illustrator program InkScape for color gradients and text editing."
   },
   {
-    "objectID": "posts/redemption-poster/redemption-poster.html#tools",
-    "href": "posts/redemption-poster/redemption-poster.html#tools",
-    "title": "Dataviz: “A Recipe for Redemption” Research Poster",
-    "section": "Tools",
-    "text": "Tools\nUsed R for data analysis and visualizations. Utilized PowerPoint for the final poster design, focusing on creating a visually appealing and informative presentation that balances text content with visual data representation."
-  },
-  {
-    "objectID": "posts/multiracial-usa/multiracial-usa.html#objective",
-    "href": "posts/multiracial-usa/multiracial-usa.html#objective",
-    "title": "Multiracial Counties in the US",
-    "section": "Objective",
-    "text": "Objective\nTo visualize and compare the distribution of multiracial populations across U.S. counties, highlighting areas with higher than the national average (2.6%) per capita of multiracial individuals."
-  },
-  {
-    "objectID": "posts/multiracial-usa/multiracial-usa.html#approach",
-    "href": "posts/multiracial-usa/multiracial-usa.html#approach",
-    "title": "Multiracial Counties in the US",
-    "section": "Approach",
-    "text": "Approach\nCreated a map to display multiracial population data by county. Counties in blue show a have a higher than national average proportion of multiracial individuals. The map also identifies specific counties with the lowest and highest multiracial populations."
-  },
-  {
-    "objectID": "posts/multiracial-usa/multiracial-usa.html#tools-used",
-    "href": "posts/multiracial-usa/multiracial-usa.html#tools-used",
-    "title": "Multiracial Counties in the US",
-    "section": "Tools Used",
-    "text": "Tools Used\nData was acquired using the tidycensus package in R, allowing access to detailed census data. The visualization was constructed using GIS software capabilities within R, using ggplot2 for map rendering and aesthetic adjustments. Data callouts were added with Adobe Photoshop."
-  },
-  {
-    "objectID": "posts/empathic-people-poster/empathic-people-poster.html#objective",
-    "href": "posts/empathic-people-poster/empathic-people-poster.html#objective",
-    "title": "Dataviz: “Who Are Empathic People?” Research Poster",
-    "section": "Objective",
-    "text": "Objective\nPresent the findings of a research project on various measures of empathy and their correlates, allowing for an intuitive visual comparison of how different empathies are correlated with key personality traits. Format was a 48” x 36” poster that was presented at the 2020 Annual Conference for the Society of Personality and Social Psychology."
-  },
-  {
-    "objectID": "posts/empathic-people-poster/empathic-people-poster.html#approach",
-    "href": "posts/empathic-people-poster/empathic-people-poster.html#approach",
-    "title": "Dataviz: “Who Are Empathic People?” Research Poster",
-    "section": "Approach",
-    "text": "Approach\nEmployed a multi-dimensional visualization strategy using radar charts to depict the relationship between various empathy definitions and personality traits. This approach helped in highlighting the nuances between different scholarly interpretations of empathy and their psychological profiles."
-  },
-  {
-    "objectID": "posts/empathic-people-poster/empathic-people-poster.html#tools-used",
-    "href": "posts/empathic-people-poster/empathic-people-poster.html#tools-used",
-    "title": "Dataviz: “Who Are Empathic People?” Research Poster",
-    "section": "Tools Used",
-    "text": "Tools Used\nR and ggplot (using custom functions) were used to create detailed radar charts. This allowed for a clear, visual summary of complex multi-trait data, making the information accessible and engaging for viewers. Final design was created in PowerPoint."
-  },
-  {
-    "objectID": "posts/pseudonym-generator/pseudonym-generator.html#objective",
-    "href": "posts/pseudonym-generator/pseudonym-generator.html#objective",
-    "title": "ShinyApp: Pseudonym Generator",
-    "section": "Objective:",
-    "text": "Objective:\nDevelop a Shiny app-based pseudonym generator that useshistorical U.S. Social Security data to generate names based on gender and year, aiding in anonymizing quotes while reflecting the demographic details of participants."
-  },
-  {
-    "objectID": "posts/pseudonym-generator/pseudonym-generator.html#approach",
-    "href": "posts/pseudonym-generator/pseudonym-generator.html#approach",
-    "title": "ShinyApp: Pseudonym Generator",
-    "section": "Approach",
-    "text": "Approach\nImplemented a user-friendly interface in Shiny where users can specify the first name, age, and gender preference for pseudonyms. The app filters names starting with the same letter as the input and selects those popular in the user’s birth year, providing a personalized yet anonymous identifier."
-  },
-  {
-    "objectID": "posts/pseudonym-generator/pseudonym-generator.html#tools-used",
-    "href": "posts/pseudonym-generator/pseudonym-generator.html#tools-used",
-    "title": "ShinyApp: Pseudonym Generator",
-    "section": "Tools Used",
-    "text": "Tools Used\nUsethe Shiny package in R for the web app framework. The babynames package provided access to a comprehensive dataset from the U.S. Social Security Administration, covering names from 1880 to 2017."
-  },
-  {
-    "objectID": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#objective",
-    "href": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#objective",
-    "title": "Research: IDEA Climate Survey 2022-2023",
-    "section": "Objective",
-    "text": "Objective\nTo evaluate the climate of inclusion, diversity, equity, and access (IDEA) among undergraduate psychology students at the University of Toronto Mississauga. The survey aimed to identify key areas of strength and improvement by gathering insights into students’ experiences and perceptions regarding these dimensions."
-  },
-  {
-    "objectID": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#approach",
-    "href": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#approach",
-    "title": "Research: IDEA Climate Survey 2022-2023",
-    "section": "Approach",
-    "text": "Approach\nThe project involved the design and execution of a detailed survey distributed over several months. As a key project administrator and methodologist, I coordinated the efforts of faculty, postdocs, graduate, and undergraduate students, ensuring rigorous data analysis and results presentation. We crafted the survey to capture a wide range of demographic information and students’ personal experiences with IDEA-related issues. Analysis involved quantitative and qualitative methods to thoroughly examine the data collected."
-  },
-  {
-    "objectID": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#tools-used",
-    "href": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#tools-used",
-    "title": "Research: IDEA Climate Survey 2022-2023",
-    "section": "Tools Used",
-    "text": "Tools Used\nThe survey was developed and analyzed using a combination of statistical software (R, SPSS, Excel) and qualitative analysis tools. Data curation, formal analysis, and visualization were performed using advanced statistical software packages. Contributions included data analysis, writing, and clear visualization of findings for report preparation.\nRead the report"
-  },
-  {
-    "objectID": "posts/free-speech/free-speech.html#objective",
-    "href": "posts/free-speech/free-speech.html#objective",
-    "title": "Research: Free Speech and Inclusion",
-    "section": "Objective",
-    "text": "Objective\nThe objective of this study was to explore the current climate of free speech and inclusion within higher education institutions, particularly how college students navigate and perceive the dynamics of speech and ideological expression on campuses across the United States."
-  },
-  {
-    "objectID": "posts/free-speech/free-speech.html#approach",
-    "href": "posts/free-speech/free-speech.html#approach",
-    "title": "Research: Free Speech and Inclusion",
-    "section": "Approach",
-    "text": "Approach\n\nResearch Design: As a research fellow at More in Common, I was a key contributer to a comprehensive survey that aimed to capture a wide array of viewpoints on the topic of free speech and social inclusion.\nSurvey Execution: We partnered with the nonprofit Constructive Dialogue Institute to develop and administer a national survey to 2,618 college students, using Qualtrics Panels for its robust sampling and the Qualtrics platform for its survey programming.\nData Collection: The survey included a variety of questions designed to measure students’ attitudes towards free speech, “cancel culture,” and their personal experiences with speech on campus. This included demographic data to ensure broad representation across different regions and institution types."
-  },
-  {
-    "objectID": "posts/free-speech/free-speech.html#tools-used",
-    "href": "posts/free-speech/free-speech.html#tools-used",
-    "title": "Research: Free Speech and Inclusion",
-    "section": "Tools Used",
-    "text": "Tools Used\n\nQualtrics: Used for survey programming due to its best-in-class survey platform.\nStatistical Software: Analysis was conducted using R, which facilitated rigorous examination of the data to identify trends and draw meaningful conclusions.\nTeam Coordination Tools: Leveraged project management and communication tools (Asana, Slack) to coordinate research activities among team members spread across organizations and geographic locations."
-  },
-  {
-    "objectID": "posts/free-speech/free-speech.html#analysis-and-findings",
-    "href": "posts/free-speech/free-speech.html#analysis-and-findings",
-    "title": "Research: Free Speech and Inclusion",
-    "section": "Analysis and Findings",
-    "text": "Analysis and Findings\n\nStatistical Analysis: Used statistical methods to analyze the data, focusing on frequences and correlates of students’ political ideologies, experiences of being offended, and their tendencies to engage in or be subjected to call out behaviors.\nExploratory Data Analysis: In the report, we presented quantitative findings in a format simplified for the general public. However, behind the scenes, I conducted in-depth statistical analyses to ensure the robustness of our results. Below is a selection of data visualizations from this extensive analysis. These samples from my exploratory data analysis investigate how beliefs in social justice, termed “Social Justice Orientation” (SJO), relate to other variables."
-  },
-  {
-    "objectID": "posts/free-speech/free-speech.html#outputs",
-    "href": "posts/free-speech/free-speech.html#outputs",
-    "title": "Research: Free Speech and Inclusion",
-    "section": "Outputs",
-    "text": "Outputs\n\nRead the full report\nRead a More in Common newsletter summary of the report"
+    "objectID": "posts/careless-responders/careless-responders.html#the-peer-reviewed-article",
+    "href": "posts/careless-responders/careless-responders.html#the-peer-reviewed-article",
+    "title": "Careless Responders",
+    "section": "The Peer-Reviewed Article",
+    "text": "The Peer-Reviewed Article\nTo read more about this research, you can find the article here:\nStosic, M. D., Murphy, B. A., Duong, F., Fultz, A. A., Harvey, S. E., & Bernieri, F. (2024). Careless Responding: Why Many Findings Are Spurious or Spuriously Inflated. Advances in Methods and Practices in Psychological Science, 7(1), 25152459241231581.\n\nAbstract: Contrary to long-standing conventional wisdom, failing to exclude data from carelessly responding participants on questionnaires or behavioral tasks will frequently result in false-positive or spuriously inflated findings. Despite prior publications demonstrating this disturbing statistical confound, it continues to be widely underappreciated by most psychologists, including highly experienced journal editors. In this article, we aim to comprehensively explain and demonstrate the severity and widespread prevalence of careless responding’s (CR) inflationary effects in psychological research. We first describe when and why one can expect to observe the inflationary effect of unremoved CR data in a manner accessible to early graduate or advanced undergraduate students. To this end, we provide an online simulator tool and instructional videos for use in classrooms. We then illustrate realistic magnitudes of the severity of unremoved CR data by presenting novel reanalyses of data sets from three high-profile articles: We found that many of their published effects would have been meaningfully, sometimes dramatically, inflated if they had not rigorously screened out CR data. To demonstrate the frequency with which researchers fail to adequately screen for CR, we then conduct a systematic review of CR screening procedures in studies using paid online samples (e.g., MTurk) published across two prominent psychological-science journals. These findings suggest that most researchers either did not conduct any kind of CR screening or conducted only bare minimal screening. To help researchers avoid publishing spuriously inflated findings, we summarize best practices to help mitigate the threats of CR data."
   }
 ]
