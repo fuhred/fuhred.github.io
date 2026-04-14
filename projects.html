@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-research .list');
+    const listingTargetEl = window.document.querySelector('#listing-all .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -87,35 +87,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-research'] = new List('listing-research', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-other .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-other'] = new List('listing-other', options);
+    window['quarto-listings']['listing-all'] = new List('listing-all', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -220,9 +192,37 @@ window.Quarto = {
 </header>
 
 
-<div id="listing-research" class="quarto-listing quarto-listing-container-grid">
+<div id="listing-all" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-categories="cmVzZWFyY2glMjBkZXNpZ24lMkNhbmFseXNpcyUyQ3NoaW55JTJDZGF0YXZpeiUyQ2NvZGU=" data-listing-date-sort="1700542800000" data-listing-file-modified-sort="1715718790000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="610">
+<div class="g-col-1" data-index="0" data-categories="YW5hbHlzaXMlMkNkYXRhdml6" data-listing-date-sort="1707368400000" data-listing-file-modified-sort="1715706101000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="124">
+<a href="./posts/redemption-poster/redemption-poster.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/redemption-poster/image.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Dataviz: “A Recipe for Redemption” Research Poster
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YXZpeg=='); return false;">dataviz</div>
+
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Feb 2024
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="cmVzZWFyY2glMjBkZXNpZ24lMkNhbmFseXNpcyUyQ3NoaW55JTJDZGF0YXZpeiUyQ2NvZGU=" data-listing-date-sort="1700542800000" data-listing-file-modified-sort="1715718790000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="610">
 <a href="./posts/careless-responders/careless-responders.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -256,7 +256,7 @@ Nov 2023
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="cmVzZWFyY2glMjBkZXNpZ24lMkNhbmFseXNpcyUyQ2RhdGF2aXo=" data-listing-date-sort="1695441600000" data-listing-file-modified-sort="1776030621537" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="254">
+<div class="g-col-1" data-index="2" data-categories="cmVzZWFyY2glMjBkZXNpZ24lMkNhbmFseXNpcyUyQ2RhdGF2aXo=" data-listing-date-sort="1695441600000" data-listing-file-modified-sort="1776030621537" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="254">
 <a href="./posts/free-speech/free-speech.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -286,7 +286,7 @@ Sep 2023
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="cmVzZWFyY2glMjBkZXNpZ24lMkNhbmFseXNpcyUyQ2RhdGF2aXo=" data-listing-date-sort="1689912000000" data-listing-file-modified-sort="1715712640000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="175">
+<div class="g-col-1" data-index="3" data-categories="cmVzZWFyY2glMjBkZXNpZ24lMkNhbmFseXNpcyUyQ2RhdGF2aXo=" data-listing-date-sort="1689912000000" data-listing-file-modified-sort="1715712640000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="175">
 <a href="./posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -316,40 +316,7 @@ Jul 2023
 </div>
 </div></a>
 </div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-<div id="listing-other" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-categories="YW5hbHlzaXMlMkNkYXRhdml6" data-listing-date-sort="1707368400000" data-listing-file-modified-sort="1715706101000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="124">
-<a href="./posts/redemption-poster/redemption-poster.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/redemption-poster/image.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Dataviz: “A Recipe for Redemption” Research Poster
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YXZpeg=='); return false;">dataviz</div>
-
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-Feb 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="ZGF0YXZpeiUyQ3R1dG9yaWFsJTJDY29kZQ==" data-listing-date-sort="1679544000000" data-listing-file-modified-sort="1715437401000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2076">
+<div class="g-col-1" data-index="4" data-categories="ZGF0YXZpeiUyQ3R1dG9yaWFsJTJDY29kZQ==" data-listing-date-sort="1679544000000" data-listing-file-modified-sort="1715437401000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2076">
 <a href="./posts/dumbbell-with-gap/dumbbell.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -379,7 +346,7 @@ Mar 2023
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="YW5hbHlzaXMlMkNkYXRhdml6JTJDdHV0b3JpYWwlMkNjb2Rl" data-listing-date-sort="1647316800000" data-listing-file-modified-sort="1715523597000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2954">
+<div class="g-col-1" data-index="5" data-categories="YW5hbHlzaXMlMkNkYXRhdml6JTJDdHV0b3JpYWwlMkNjb2Rl" data-listing-date-sort="1647316800000" data-listing-file-modified-sort="1715523597000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2954">
 <a href="./posts/affective-polarization/affectivepolarization.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -411,7 +378,7 @@ Mar 2022
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="YW5hbHlzaXMlMkNkYXRhdml6JTJDc3BhdGlhbA==" data-listing-date-sort="1628481600000" data-listing-file-modified-sort="1715707929000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="111">
+<div class="g-col-1" data-index="6" data-categories="YW5hbHlzaXMlMkNkYXRhdml6JTJDc3BhdGlhbA==" data-listing-date-sort="1628481600000" data-listing-file-modified-sort="1715707929000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="111">
 <a href="./posts/multiracial-usa/multiracial-usa.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -441,7 +408,7 @@ Aug 2021
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="c2hpbnk=" data-listing-date-sort="1623211200000" data-listing-file-modified-sort="1715712202000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="117">
+<div class="g-col-1" data-index="7" data-categories="c2hpbnk=" data-listing-date-sort="1623211200000" data-listing-file-modified-sort="1715712202000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="117">
 <a href="./posts/pseudonym-generator/pseudonym-generator.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -467,7 +434,7 @@ Jun 2021
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="YW5hbHlzaXMlMkNkYXRhdml6" data-listing-date-sort="1582261200000" data-listing-file-modified-sort="1715708277000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
+<div class="g-col-1" data-index="8" data-categories="YW5hbHlzaXMlMkNkYXRhdml6" data-listing-date-sort="1582261200000" data-listing-file-modified-sort="1715708277000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
 <a href="./posts/empathic-people-poster/empathic-people-poster.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">

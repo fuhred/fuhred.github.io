@@ -23,12 +23,15 @@
     }
 
     html, body {
-      background: var(--bg);
+      background-color: var(--bg);
+      background-image: radial-gradient(ellipse at 110% 110%, rgba(58, 90, 180, 0.18) 0%, transparent 60%);
+      background-attachment: fixed;
       color: var(--text);
       font-family: 'DM Sans', sans-serif;
       font-size: 16px;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
     }
 
     a {
@@ -45,7 +48,8 @@
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      background: var(--bg);
+      background: rgba(244, 244, 240, 0.92);
+      backdrop-filter: blur(8px);
       z-index: 100;
     }
 
@@ -86,6 +90,18 @@
       max-width: 780px;
       margin: 0 auto;
       padding: 10rem 2.5rem 6rem;
+    }
+
+    /* ---- ANIMATIONS ---- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* ---- PHOTO ---- */
@@ -194,32 +210,41 @@
 
   <main>
 
-    <img src="profile6.png" alt="Fred Duong" class="profile-photo" />
+    <img src="profile6.png" alt="Fred Duong" class="profile-photo fade-up" style="transition-delay: 0.05s;" />
 
-    <h1 class="opener">I'm <span style="background: linear-gradient(90deg, #6b5ca5 0%, #c4838a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Fred Duong</span>, a researcher studying how Americans think about politics, identity, and each other.</h1>
+    <h1 class="opener fade-up" style="transition-delay: 0.15s;">I'm <span style="background: linear-gradient(90deg, #6b5ca5 0%, #c4838a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Fred Duong</span>, a researcher studying how Americans understand politics, identity, and each other.</h1>
 
-    <div id="btn-row-grad" class="btn-row">
+    <div id="btn-row-grad" class="btn-row fade-up" style="transition-delay: 0.25s;">
       <a href="https://www.linkedin.com/in/fredduong" target="_blank" class="btn-grad">LinkedIn</a>
       <a href="mailto:fred@moreincommon.com" class="btn-grad">fred@moreincommon.com</a>
       <a href="mailto:freddoesresearch@gmail.com" class="btn-grad">freddoesresearch@gmail.com</a>
     </div>
 
-    <div class="bio">
+    <div class="bio fade-up" style="transition-delay: 0.38s;">
       <p>I am a Senior Research Manager at <a href="https://www.moreincommon.com" target="_blank">More in Common US</a>, where I lead nationally representative research on polarization and social cohesion in America. My work spans survey design, segmentation, qualitative methods, and R-based data analysis, producing findings that are rigorous, accessible, and visually compelling.</p>
       <p>I have an M.A. from New York University, a Ph.D. in psychology from Northeastern University, and postdoctoral training at the University of Toronto.</p>
       <p>Please see my <a href="projects.html">portfolio</a> for a sample of my work.</p>
     </div>
 
-    <div class="btn-row" style="margin-top: 2rem; gap: 0.4rem;">
+    <div class="btn-row fade-up" style="margin-top: 2rem; gap: 0.4rem; transition-delay: 0.48s;">
       <a href="https://scholar.google.com/citations?user=GdguKW8AAAAJ" target="_blank" class="btn-ghost">Google Scholar</a>
       <a href="https://osf.io/wsczn" target="_blank" class="btn-ghost">OSF</a>
-      <a href="https://bsky.app" target="_blank" class="btn-ghost">Bluesky</a>
+      <a href="https://bsky.app/profile/fuhred.bsky.social" target="_blank" class="btn-ghost">Bluesky</a>
       <a href="https://github.com/fuhred" target="_blank" class="btn-ghost">GitHub</a>
     </div>
 
   </main>
 
   <script>
+    // Staggered fade-up on load
+    window.addEventListener('load', () => {
+      const els = document.querySelectorAll('.fade-up');
+      els.forEach(el => {
+        setTimeout(() => el.classList.add('visible'), 50);
+      });
+    });
+
+    // Shared gradient across button row
     function applySharedGradient() {
       const row = document.getElementById('btn-row-grad');
       const btns = row.querySelectorAll('.btn-grad');
