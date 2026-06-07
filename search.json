@@ -4,119 +4,49 @@
     "href": "projects.html",
     "title": "Portfolio",
     "section": "",
-    "text": "Research: Careless Responders\n\n\n\nresearch design\n\n\nanalysis\n\n\nshiny\n\n\ndataviz\n\n\ncode\n\n\n\n\n\n\n\nNov 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: Free Speech and Inclusion\n\n\n\nresearch design\n\n\nanalysis\n\n\ndataviz\n\n\n\n\n\n\n\nSep 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: IDEA Climate Survey 2022-2023\n\n\n\nresearch design\n\n\nanalysis\n\n\ndataviz\n\n\n\n\n\n\n\nJul 2023\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n\n\n\n\n\n\nDataviz: “A Recipe for Redemption” Research Poster\n\n\n\nanalysis\n\n\ndataviz\n\n\n\n\n\n\n\nFeb 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial: Dumbbell Chart with a Gap Column\n\n\n\ndataviz\n\n\ntutorial\n\n\ncode\n\n\n\n\n\n\n\nMar 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial: Affective Polarization\n\n\n\nanalysis\n\n\ndataviz\n\n\ntutorial\n\n\ncode\n\n\n\n\n\n\n\nMar 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultiracial Counties in the US\n\n\n\nanalysis\n\n\ndataviz\n\n\nspatial\n\n\n\n\n\n\n\nAug 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShinyApp: Pseudonym Generator\n\n\n\nshiny\n\n\n\n\n\n\n\nJun 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataviz: “Who Are Empathic People?” Research Poster\n\n\n\nanalysis\n\n\ndataviz\n\n\n\n\n\n\n\nFeb 2020\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Design: Americans’ Environmental Blind Spot\n\n\n\ndataviz\n\n\n\n\n\n\n\nMay 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: Building Cultures of Constructive Dialogue\n\n\n\nanalysis\n\n\n\n\n\n\n\nApr 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nDesign: The Connection Opportunity\n\n\n\ndesign\n\ndataviz\n\n\n\n\n\n\n\nMar 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: How Seven Different “Empathies” Correlate With Personality\n\n\n\nresearch design\n\nanalysis\n\ndataviz\n\n\n\n\n\n\n\nDec 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: Between Hesitation and Hope\n\n\n\nresearch design\n\nanalysis\n\ndataviz\n\n\n\n\n\n\n\nOct 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataviz: “A Recipe for Redemption” Research Poster\n\n\n\nanalysis\n\ndataviz\n\n\n\n\n\n\n\nFeb 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: Careless Responders\n\n\n\nresearch design\n\nanalysis\n\nshiny\n\ndataviz\n\ncode\n\n\n\n\n\n\n\nNov 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: Free Speech and Inclusion\n\n\n\nresearch design\n\nanalysis\n\ndataviz\n\n\n\n\n\n\n\nSep 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch: IDEA Climate Survey 2022-2023\n\n\n\nresearch design\n\nanalysis\n\ndataviz\n\n\n\n\n\n\n\nJul 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial: Dumbbell Chart with a Gap Column\n\n\n\ndataviz\n\ntutorial\n\ncode\n\n\n\n\n\n\n\nMar 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nTutorial: Affective Polarization\n\n\n\nanalysis\n\ndataviz\n\ntutorial\n\ncode\n\n\n\n\n\n\n\nMar 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultiracial Counties in the US\n\n\n\nanalysis\n\ndataviz\n\nspatial\n\n\n\n\n\n\n\nAug 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nShinyApp: Pseudonym Generator\n\n\n\nshiny\n\n\n\n\n\n\n\nJun 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataviz: “Who Are Empathic People?” Research Poster\n\n\n\nanalysis\n\ndataviz\n\n\n\n\n\n\n\nFeb 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/pseudonym-generator/pseudonym-generator.html",
-    "href": "posts/pseudonym-generator/pseudonym-generator.html",
-    "title": "ShinyApp: Pseudonym Generator",
-    "section": "",
-    "text": "Preview Image\nLaunch the ShinyApp"
-  },
-  {
-    "objectID": "posts/pseudonym-generator/pseudonym-generator.html#objective",
-    "href": "posts/pseudonym-generator/pseudonym-generator.html#objective",
-    "title": "ShinyApp: Pseudonym Generator",
-    "section": "Objective:",
-    "text": "Objective:\nDevelop a Shiny app-based pseudonym generator that useshistorical U.S. Social Security data to generate names based on gender and year, aiding in anonymizing quotes while reflecting the demographic details of participants."
-  },
-  {
-    "objectID": "posts/pseudonym-generator/pseudonym-generator.html#approach",
-    "href": "posts/pseudonym-generator/pseudonym-generator.html#approach",
-    "title": "ShinyApp: Pseudonym Generator",
-    "section": "Approach",
-    "text": "Approach\nImplemented a user-friendly interface in Shiny where users can specify the first name, age, and gender preference for pseudonyms. The app filters names starting with the same letter as the input and selects those popular in the user’s birth year, providing a personalized yet anonymous identifier."
-  },
-  {
-    "objectID": "posts/pseudonym-generator/pseudonym-generator.html#tools-used",
-    "href": "posts/pseudonym-generator/pseudonym-generator.html#tools-used",
-    "title": "ShinyApp: Pseudonym Generator",
-    "section": "Tools Used",
-    "text": "Tools Used\nUsethe Shiny package in R for the web app framework. The babynames package provided access to a comprehensive dataset from the U.S. Social Security Administration, covering names from 1880 to 2017."
-  },
-  {
-    "objectID": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#objective",
-    "href": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#objective",
-    "title": "Research: IDEA Climate Survey 2022-2023",
+    "objectID": "posts/multiracial-usa/multiracial-usa.html#objective",
+    "href": "posts/multiracial-usa/multiracial-usa.html#objective",
+    "title": "Multiracial Counties in the US",
     "section": "Objective",
-    "text": "Objective\nTo evaluate the climate of inclusion, diversity, equity, and access (IDEA) among undergraduate psychology students at the University of Toronto Mississauga. The survey aimed to identify key areas of strength and improvement by gathering insights into students’ experiences and perceptions regarding these dimensions."
+    "text": "Objective\nTo visualize and compare the distribution of multiracial populations across U.S. counties, highlighting areas with higher than the national average (2.6%) per capita of multiracial individuals."
   },
   {
-    "objectID": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#approach",
-    "href": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#approach",
-    "title": "Research: IDEA Climate Survey 2022-2023",
+    "objectID": "posts/multiracial-usa/multiracial-usa.html#approach",
+    "href": "posts/multiracial-usa/multiracial-usa.html#approach",
+    "title": "Multiracial Counties in the US",
     "section": "Approach",
-    "text": "Approach\nThe project involved the design and execution of a detailed survey distributed over several months. As a key project administrator and methodologist, I coordinated the efforts of faculty, postdocs, graduate, and undergraduate students, ensuring rigorous data analysis and results presentation. We crafted the survey to capture a wide range of demographic information and students’ personal experiences with IDEA-related issues. Analysis involved quantitative and qualitative methods to thoroughly examine the data collected."
+    "text": "Approach\nCreated a map to display multiracial population data by county. Counties in blue show a have a higher than national average proportion of multiracial individuals. The map also identifies specific counties with the lowest and highest multiracial populations."
   },
   {
-    "objectID": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#tools-used",
-    "href": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#tools-used",
-    "title": "Research: IDEA Climate Survey 2022-2023",
+    "objectID": "posts/multiracial-usa/multiracial-usa.html#tools-used",
+    "href": "posts/multiracial-usa/multiracial-usa.html#tools-used",
+    "title": "Multiracial Counties in the US",
     "section": "Tools Used",
-    "text": "Tools Used\nThe survey was developed and analyzed using a combination of statistical software (R, SPSS, Excel) and qualitative analysis tools. Data curation, formal analysis, and visualization were performed using advanced statistical software packages. Contributions included data analysis, writing, and clear visualization of findings for report preparation.\nRead the report"
+    "text": "Tools Used\nData was acquired using the tidycensus package in R, allowing access to detailed census data. The visualization was constructed using GIS software capabilities within R, using ggplot2 for map rendering and aesthetic adjustments. Data callouts were added with Adobe Photoshop."
   },
   {
-    "objectID": "posts/empathic-people-poster/empathic-people-poster.html#objective",
-    "href": "posts/empathic-people-poster/empathic-people-poster.html#objective",
-    "title": "Dataviz: “Who Are Empathic People?” Research Poster",
+    "objectID": "posts/redemption-poster/redemption-poster.html#objective",
+    "href": "posts/redemption-poster/redemption-poster.html#objective",
+    "title": "Dataviz: “A Recipe for Redemption” Research Poster",
     "section": "Objective",
-    "text": "Objective\nPresent the findings of a research project on various measures of empathy and their correlates, allowing for an intuitive visual comparison of how different empathies are correlated with key personality traits. Format was a 48” x 36” poster that was presented at the 2020 Annual Conference for the Society of Personality and Social Psychology."
+    "text": "Objective\nPresent the findings from a comprehensive six-study research project on moral redemption through a detailed and engaging 48” x 36” poster at the Morality Preconference for the 2024 Annual Conference of the Society for Personality and Social Psychology."
   },
   {
-    "objectID": "posts/empathic-people-poster/empathic-people-poster.html#approach",
-    "href": "posts/empathic-people-poster/empathic-people-poster.html#approach",
-    "title": "Dataviz: “Who Are Empathic People?” Research Poster",
+    "objectID": "posts/redemption-poster/redemption-poster.html#approach",
+    "href": "posts/redemption-poster/redemption-poster.html#approach",
+    "title": "Dataviz: “A Recipe for Redemption” Research Poster",
     "section": "Approach",
-    "text": "Approach\nEmployed a multi-dimensional visualization strategy using radar charts to depict the relationship between various empathy definitions and personality traits. This approach helped in highlighting the nuances between different scholarly interpretations of empathy and their psychological profiles."
+    "text": "Approach\nMost research posters are three-columns. I adopted an unique five-column layout inspired by the design of newspapers to manage the extensive data from multiple studies effectively. This layout facilitated structured storytelling and highlighted key findings—organized by two overarching research questions—across the broader themes of the research, enhancing viewer engagement and understanding."
   },
   {
-    "objectID": "posts/empathic-people-poster/empathic-people-poster.html#tools-used",
-    "href": "posts/empathic-people-poster/empathic-people-poster.html#tools-used",
-    "title": "Dataviz: “Who Are Empathic People?” Research Poster",
-    "section": "Tools Used",
-    "text": "Tools Used\nR and ggplot (using custom functions) were used to create detailed radar charts. This allowed for a clear, visual summary of complex multi-trait data, making the information accessible and engaging for viewers. Final design was created in PowerPoint."
-  },
-  {
-    "objectID": "posts/careless-responders/careless-responders.html",
-    "href": "posts/careless-responders/careless-responders.html",
-    "title": "Research: Careless Responders",
-    "section": "",
-    "text": "This research examines several aspects of careless responding—responding that is not attentive to the content of the questions or items being administered.\nKey takeaways\n\nOn the whole, careless responding inflates effects rather than weakens them. Most researchers incorrectly assume the opposite, and in a survey of editors of leading psychology journals, we find that even these seasoned experts have incorrect intuitions.\nPublished peer-reviewed studies in high-impact journals often insufficiently screen for careless responding.\nWe provide an interactive web tool (a Shiny app) to explore and demonstrate careless responding examples in real time.\n\nI played a key role in this project, overseeing or contributing to study design, analysis, data visualization, tool development, writing, and editing. Here, I showcase two contributions: the Shiny app and an alluvial data visualization."
-  },
-  {
-    "objectID": "posts/careless-responders/careless-responders.html#overview",
-    "href": "posts/careless-responders/careless-responders.html#overview",
-    "title": "Research: Careless Responders",
-    "section": "",
-    "text": "This research examines several aspects of careless responding—responding that is not attentive to the content of the questions or items being administered.\nKey takeaways\n\nOn the whole, careless responding inflates effects rather than weakens them. Most researchers incorrectly assume the opposite, and in a survey of editors of leading psychology journals, we find that even these seasoned experts have incorrect intuitions.\nPublished peer-reviewed studies in high-impact journals often insufficiently screen for careless responding.\nWe provide an interactive web tool (a Shiny app) to explore and demonstrate careless responding examples in real time.\n\nI played a key role in this project, overseeing or contributing to study design, analysis, data visualization, tool development, writing, and editing. Here, I showcase two contributions: the Shiny app and an alluvial data visualization."
-  },
-  {
-    "objectID": "posts/careless-responders/careless-responders.html#shiny-app",
-    "href": "posts/careless-responders/careless-responders.html#shiny-app",
-    "title": "Research: Careless Responders",
-    "section": "Shiny app",
-    "text": "Shiny app\n\n\n\n\n\nWhile we write in the article on the effects of careless responding, this tool vividly demonstrates how careless responses can artificially inflate statistical correlations, providing an engaging, hands-on learning experience. To program this, I used R/Shiny/ggplot2, and the full code is available on Github. Click on button to launch.\n\nLaunch the Shiny app"
-  },
-  {
-    "objectID": "posts/careless-responders/careless-responders.html#alluvial-figure",
-    "href": "posts/careless-responders/careless-responders.html#alluvial-figure",
-    "title": "Research: Careless Responders",
-    "section": "Alluvial figure",
-    "text": "Alluvial figure\n\n\n\n\n\nMy goal was to highlight the gap between the frequencies of good practices (stringent screening) and poor practices (less stringent or no screening). Alluvial plots are visualizations that are striking and beautiful. However, they are also often unclear, like visual puzzles that end up not communicating what is intended.\nHere, I designed a custom color palette to highlight differences, with brighter, more vivid colors for good careless responding practices. The colors emphasize that only a minority of published studies in high impact journals used sufficiently stringent screening. To make this, I used RAWGraphs to make the base figure and the vector illustrator program InkScape for color gradients and text editing."
-  },
-  {
-    "objectID": "posts/careless-responders/careless-responders.html#the-peer-reviewed-article",
-    "href": "posts/careless-responders/careless-responders.html#the-peer-reviewed-article",
-    "title": "Research: Careless Responders",
-    "section": "The Peer-Reviewed Article",
-    "text": "The Peer-Reviewed Article\nFor a deeper exploration of our findings and methodologies, the peer-reviewed article can be accessed in the journal Advances in Methods and Practices in Psychological Science:\nStosic, M. D., Murphy, B. A., Duong, F., Fultz, A. A., Harvey, S. E., & Bernieri, F. (2024). Careless Responding: Why Many Findings Are Spurious or Spuriously Inflated. Advances in Methods and Practices in Psychological Science, 7(1), 25152459241231581.\n\nAbstract: Contrary to long-standing conventional wisdom, failing to exclude data from carelessly responding participants on questionnaires or behavioral tasks will frequently result in false-positive or spuriously inflated findings. Despite prior publications demonstrating this disturbing statistical confound, it continues to be widely underappreciated by most psychologists, including highly experienced journal editors. In this article, we aim to comprehensively explain and demonstrate the severity and widespread prevalence of careless responding’s (CR) inflationary effects in psychological research. We first describe when and why one can expect to observe the inflationary effect of unremoved CR data in a manner accessible to early graduate or advanced undergraduate students. To this end, we provide an online simulator tool and instructional videos for use in classrooms. We then illustrate realistic magnitudes of the severity of unremoved CR data by presenting novel reanalyses of data sets from three high-profile articles: We found that many of their published effects would have been meaningfully, sometimes dramatically, inflated if they had not rigorously screened out CR data. To demonstrate the frequency with which researchers fail to adequately screen for CR, we then conduct a systematic review of CR screening procedures in studies using paid online samples (e.g., MTurk) published across two prominent psychological-science journals. These findings suggest that most researchers either did not conduct any kind of CR screening or conducted only bare minimal screening. To help researchers avoid publishing spuriously inflated findings, we summarize best practices to help mitigate the threats of CR data."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Fred Duong, Ph.D.",
-    "section": "",
-    "text": "I am a mixed-methods researcher with a passion for delivering clear insights from complex research. I am skilled in advanced analytics, statistical programming, and data visualization. My favorite projects start with investigating messy constructs and end with compelling, data-driven narratives and beautiful visuals.\nI am an expert in emotions, morality, and political psychology, though I have wide-ranging interests that I investigate using social and personality psychology. My work spans nonprofit and academic sectors. I am currently a Research Fellow at Constructive Dialogue Institute, a Research Fellow at More in Common, and a Postdoctoral Fellow at University of Toronto Mississauga. For a sample of my research, programming and data visualization, check out my portfolio.\nI have a Ph.D. in psychology from Northeastern University, a M.A. in psychology from New York University, and a B.A. in sociology from University of North Texas."
+    "objectID": "posts/redemption-poster/redemption-poster.html#tools",
+    "href": "posts/redemption-poster/redemption-poster.html#tools",
+    "title": "Dataviz: “A Recipe for Redemption” Research Poster",
+    "section": "Tools",
+    "text": "Tools\nUsed R for data analysis and visualizations. Utilized PowerPoint for the final poster design, focusing on creating a visually appealing and informative presentation that balances text content with visual data representation."
   },
   {
     "objectID": "posts/affective-polarization/affectivepolarization.html",
@@ -159,6 +89,83 @@
     "title": "Tutorial: Affective Polarization",
     "section": "Finkel et al. (2020)",
     "text": "Finkel et al. (2020)\nThis figure is interesting because it’s actually two figures: feeling thermometers on top and affective polarization on bottom.\n\n\nTop figure\n\ndf_p %&gt;% \n  \n  select(-aff_polar_iyengar, -aff_polar_finkel) %&gt;%  #we just want iyengar's aff polar\n  \n  #reshape\n  pivot_longer(-VCF0004, names_to=\"feeling\", values_to=\"Warmth\") %&gt;% \n  \n  \n  mutate(feeling=recode(feeling,\n                        inparty_feeling=\"In-party feeling\",\n                        outparty_feeling=\"Out-party feeling\",\n                        aff_polar_finkel=\"Affective polarization\"\n                        ),\n         feeling=factor(feeling, levels=c(\"In-party feeling\",   #setting levels just so ordering colors/shapes\n                                          \"Out-party feeling\",  #is more intuitive. otherwise, ggplot orders this\n                                          \"Affective polarization\" #alphabetically\n                                          ))\n         ) %&gt;%   \n  \n  \n  #plot\n  ggplot(aes(x=VCF0004, y=Warmth, color=feeling)) +\n  geom_hline(yintercept=50, color=\"black\")+\n  geom_smooth(aes(group=feeling,color=NULL, linetype=feeling),\n              method=lm, se=F, color=\"black\", size=.75)+\n  geom_point(aes(shape=feeling, fill=feeling), size=2) +\n  # geom_line(aes(linetype=feeling)) +\n  scale_x_continuous(breaks=seq(1980, 2020, by=4)\n                     ) +\n  scale_y_continuous(limits=c(0,100),\n                     labels = paste0(seq(0, 100, by=25), \"°\")\n                     ) +  \n  theme_classic() +\n  theme(panel.grid = element_blank(),\n        legend.title = element_blank(),\n        panel.border = element_blank()\n        ) +\n  labs(x=\"Election year\", y=\"Feeling thermometer ratings\",\n       title=\"Affective Polarization - Finkel et al. (2020) reproduction\") +\n  \n  #use Iyengar's colors. You can use a color picker to sample colors from images and get the hex code\n  #I use Color Cop for Windows (free)\n  scale_color_manual(values=c(\"#D8631B\", \n                              \"#00AEAE\", #purple\n                              \"#6C6D70\"  #gray\n                              )) +\n  scale_fill_manual(values=c(\"#1D9E74\", #green\n                              \"#AD6FAE\", #purple\n                              \"#6C6D70\"  #gray\n                              )) +\n  \n  scale_shape_manual(values=c(15, #square\n                              17, #circle\n                              \n                              15  #diamond\n                              )) +\n  scale_linetype_manual(values=c(\"solid\",\"dashed\",\"solid\"))\n\n\n\n\n\n\n\n\n\n\nBottom figure\n\ndf_p %&gt;% \n  \n  select(VCF0004, aff_polar_finkel) %&gt;%  #\n  pivot_longer(-VCF0004, names_to=\"feeling\", values_to=\"Warmth\") %&gt;%   #reshape\n  \n  mutate(feeling=recode(feeling,\n                        aff_polar_finkel=\"Affective polarization\"\n                        )) %&gt;%   \n  \n  #plot\n  ggplot(aes(x=VCF0004, y=Warmth)) +\n  geom_hline(yintercept=0, color=\"black\")+\n  geom_line()+\n  geom_point(shape=15, size=2) +\n  scale_x_continuous(breaks=seq(1980, 2020, by=4)) +\n  scale_y_continuous(limits=c(-15, 25),\n                     breaks=seq(-15, 25, by=5),\n                     labels = paste0(seq(-15, 25, by=5), \"°\")\n                     ) +\n  theme_classic() +\n  theme(panel.grid = element_blank(),\n        legend.title = element_blank(),\n        panel.border = element_blank(),\n        axis.title.x = element_blank()\n        ) +\n  labs(x=\"Election year\", y=\"In-party love - Out-party hate\",\n       title=\"Affective Polarization - Finkel et al. (2020)\")"
+  },
+  {
+    "objectID": "posts/empathic-people-poster/empathic-people-poster.html#objective",
+    "href": "posts/empathic-people-poster/empathic-people-poster.html#objective",
+    "title": "Dataviz: “Who Are Empathic People?” Research Poster",
+    "section": "Objective",
+    "text": "Objective\nPresent the findings of a research project on various measures of empathy and their correlates, allowing for an intuitive visual comparison of how different empathies are correlated with key personality traits. Format was a 48” x 36” poster that was presented at the 2020 Annual Conference for the Society of Personality and Social Psychology."
+  },
+  {
+    "objectID": "posts/empathic-people-poster/empathic-people-poster.html#approach",
+    "href": "posts/empathic-people-poster/empathic-people-poster.html#approach",
+    "title": "Dataviz: “Who Are Empathic People?” Research Poster",
+    "section": "Approach",
+    "text": "Approach\nEmployed a multi-dimensional visualization strategy using radar charts to depict the relationship between various empathy definitions and personality traits. This approach helped in highlighting the nuances between different scholarly interpretations of empathy and their psychological profiles."
+  },
+  {
+    "objectID": "posts/empathic-people-poster/empathic-people-poster.html#tools-used",
+    "href": "posts/empathic-people-poster/empathic-people-poster.html#tools-used",
+    "title": "Dataviz: “Who Are Empathic People?” Research Poster",
+    "section": "Tools Used",
+    "text": "Tools Used\nR and ggplot (using custom functions) were used to create detailed radar charts. This allowed for a clear, visual summary of complex multi-trait data, making the information accessible and engaging for viewers. Final design was created in PowerPoint."
+  },
+  {
+    "objectID": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#objective",
+    "href": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#objective",
+    "title": "Research: IDEA Climate Survey 2022-2023",
+    "section": "Objective",
+    "text": "Objective\nTo evaluate the climate of inclusion, diversity, equity, and access (IDEA) among undergraduate psychology students at the University of Toronto Mississauga. The survey aimed to identify key areas of strength and improvement by gathering insights into students’ experiences and perceptions regarding these dimensions."
+  },
+  {
+    "objectID": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#approach",
+    "href": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#approach",
+    "title": "Research: IDEA Climate Survey 2022-2023",
+    "section": "Approach",
+    "text": "Approach\nThe project involved the design and execution of a detailed survey distributed over several months. As a key project administrator and methodologist, I coordinated the efforts of faculty, postdocs, graduate, and undergraduate students, ensuring rigorous data analysis and results presentation. We crafted the survey to capture a wide range of demographic information and students’ personal experiences with IDEA-related issues. Analysis involved quantitative and qualitative methods to thoroughly examine the data collected."
+  },
+  {
+    "objectID": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#tools-used",
+    "href": "posts/idea-climatesurvey-2022-2023/ideaclimatesurvey2022-2023.html#tools-used",
+    "title": "Research: IDEA Climate Survey 2022-2023",
+    "section": "Tools Used",
+    "text": "Tools Used\nThe survey was developed and analyzed using a combination of statistical software (R, SPSS, Excel) and qualitative analysis tools. Data curation, formal analysis, and visualization were performed using advanced statistical software packages. Contributions included data analysis, writing, and clear visualization of findings for report preparation.\nRead the report"
+  },
+  {
+    "objectID": "posts/careless-responders/careless-responders.html",
+    "href": "posts/careless-responders/careless-responders.html",
+    "title": "Research: Careless Responders",
+    "section": "",
+    "text": "This research examines several aspects of careless responding—responding that is not attentive to the content of the questions or items being administered.\nKey takeaways\n\nOn the whole, careless responding inflates effects rather than weakens them. Most researchers incorrectly assume the opposite, and in a survey of editors of leading psychology journals, we find that even these seasoned experts have incorrect intuitions.\nPublished peer-reviewed studies in high-impact journals often insufficiently screen for careless responding.\nWe provide an interactive web tool (a Shiny app) to explore and demonstrate careless responding examples in real time.\n\nI played a key role in this project, overseeing or contributing to study design, analysis, data visualization, tool development, writing, and editing. Here, I showcase two contributions: the Shiny app and an alluvial data visualization."
+  },
+  {
+    "objectID": "posts/careless-responders/careless-responders.html#overview",
+    "href": "posts/careless-responders/careless-responders.html#overview",
+    "title": "Research: Careless Responders",
+    "section": "",
+    "text": "This research examines several aspects of careless responding—responding that is not attentive to the content of the questions or items being administered.\nKey takeaways\n\nOn the whole, careless responding inflates effects rather than weakens them. Most researchers incorrectly assume the opposite, and in a survey of editors of leading psychology journals, we find that even these seasoned experts have incorrect intuitions.\nPublished peer-reviewed studies in high-impact journals often insufficiently screen for careless responding.\nWe provide an interactive web tool (a Shiny app) to explore and demonstrate careless responding examples in real time.\n\nI played a key role in this project, overseeing or contributing to study design, analysis, data visualization, tool development, writing, and editing. Here, I showcase two contributions: the Shiny app and an alluvial data visualization."
+  },
+  {
+    "objectID": "posts/careless-responders/careless-responders.html#shiny-app",
+    "href": "posts/careless-responders/careless-responders.html#shiny-app",
+    "title": "Research: Careless Responders",
+    "section": "Shiny app",
+    "text": "Shiny app\n\n\n\n\n\nWhile we write in the article on the effects of careless responding, this tool vividly demonstrates how careless responses can artificially inflate statistical correlations, providing an engaging, hands-on learning experience. To program this, I used R/Shiny/ggplot2, and the full code is available on Github. Click on button to launch.\n\nLaunch the Shiny app"
+  },
+  {
+    "objectID": "posts/careless-responders/careless-responders.html#alluvial-figure",
+    "href": "posts/careless-responders/careless-responders.html#alluvial-figure",
+    "title": "Research: Careless Responders",
+    "section": "Alluvial figure",
+    "text": "Alluvial figure\n\n\n\n\n\nMy goal was to highlight the gap between the frequencies of good practices (stringent screening) and poor practices (less stringent or no screening). Alluvial plots are visualizations that are striking and beautiful. However, they are also often unclear, like visual puzzles that end up not communicating what is intended.\nHere, I designed a custom color palette to highlight differences, with brighter, more vivid colors for good careless responding practices. The colors emphasize that only a minority of published studies in high impact journals used sufficiently stringent screening. To make this, I used RAWGraphs to make the base figure and the vector illustrator program InkScape for color gradients and text editing."
+  },
+  {
+    "objectID": "posts/careless-responders/careless-responders.html#the-peer-reviewed-article",
+    "href": "posts/careless-responders/careless-responders.html#the-peer-reviewed-article",
+    "title": "Research: Careless Responders",
+    "section": "The Peer-Reviewed Article",
+    "text": "The Peer-Reviewed Article\nFor a deeper exploration of our findings and methodologies, the peer-reviewed article can be accessed in the journal Advances in Methods and Practices in Psychological Science:\nStosic, M. D., Murphy, B. A., Duong, F., Fultz, A. A., Harvey, S. E., & Bernieri, F. (2024). Careless Responding: Why Many Findings Are Spurious or Spuriously Inflated. Advances in Methods and Practices in Psychological Science, 7(1), 25152459241231581.\n\nAbstract: Contrary to long-standing conventional wisdom, failing to exclude data from carelessly responding participants on questionnaires or behavioral tasks will frequently result in false-positive or spuriously inflated findings. Despite prior publications demonstrating this disturbing statistical confound, it continues to be widely underappreciated by most psychologists, including highly experienced journal editors. In this article, we aim to comprehensively explain and demonstrate the severity and widespread prevalence of careless responding’s (CR) inflationary effects in psychological research. We first describe when and why one can expect to observe the inflationary effect of unremoved CR data in a manner accessible to early graduate or advanced undergraduate students. To this end, we provide an online simulator tool and instructional videos for use in classrooms. We then illustrate realistic magnitudes of the severity of unremoved CR data by presenting novel reanalyses of data sets from three high-profile articles: We found that many of their published effects would have been meaningfully, sometimes dramatically, inflated if they had not rigorously screened out CR data. To demonstrate the frequency with which researchers fail to adequately screen for CR, we then conduct a systematic review of CR screening procedures in studies using paid online samples (e.g., MTurk) published across two prominent psychological-science journals. These findings suggest that most researchers either did not conduct any kind of CR screening or conducted only bare minimal screening. To help researchers avoid publishing spuriously inflated findings, we summarize best practices to help mitigate the threats of CR data."
   },
   {
     "objectID": "posts/dumbbell-with-gap/dumbbell.html",
@@ -245,45 +252,101 @@
     "text": "Outputs\n\nRead the full report\nRead a More in Common newsletter summary of the report"
   },
   {
-    "objectID": "posts/multiracial-usa/multiracial-usa.html#objective",
-    "href": "posts/multiracial-usa/multiracial-usa.html#objective",
-    "title": "Multiracial Counties in the US",
-    "section": "Objective",
-    "text": "Objective\nTo visualize and compare the distribution of multiracial populations across U.S. counties, highlighting areas with higher than the national average (2.6%) per capita of multiracial individuals."
+    "objectID": "posts/pseudonym-generator/pseudonym-generator.html",
+    "href": "posts/pseudonym-generator/pseudonym-generator.html",
+    "title": "ShinyApp: Pseudonym Generator",
+    "section": "",
+    "text": "Preview Image\nLaunch the ShinyApp"
   },
   {
-    "objectID": "posts/multiracial-usa/multiracial-usa.html#approach",
-    "href": "posts/multiracial-usa/multiracial-usa.html#approach",
-    "title": "Multiracial Counties in the US",
+    "objectID": "posts/pseudonym-generator/pseudonym-generator.html#objective",
+    "href": "posts/pseudonym-generator/pseudonym-generator.html#objective",
+    "title": "ShinyApp: Pseudonym Generator",
+    "section": "Objective:",
+    "text": "Objective:\nDevelop a Shiny app-based pseudonym generator that useshistorical U.S. Social Security data to generate names based on gender and year, aiding in anonymizing quotes while reflecting the demographic details of participants."
+  },
+  {
+    "objectID": "posts/pseudonym-generator/pseudonym-generator.html#approach",
+    "href": "posts/pseudonym-generator/pseudonym-generator.html#approach",
+    "title": "ShinyApp: Pseudonym Generator",
     "section": "Approach",
-    "text": "Approach\nCreated a map to display multiracial population data by county. Counties in blue show a have a higher than national average proportion of multiracial individuals. The map also identifies specific counties with the lowest and highest multiracial populations."
+    "text": "Approach\nImplemented a user-friendly interface in Shiny where users can specify the first name, age, and gender preference for pseudonyms. The app filters names starting with the same letter as the input and selects those popular in the user’s birth year, providing a personalized yet anonymous identifier."
   },
   {
-    "objectID": "posts/multiracial-usa/multiracial-usa.html#tools-used",
-    "href": "posts/multiracial-usa/multiracial-usa.html#tools-used",
-    "title": "Multiracial Counties in the US",
+    "objectID": "posts/pseudonym-generator/pseudonym-generator.html#tools-used",
+    "href": "posts/pseudonym-generator/pseudonym-generator.html#tools-used",
+    "title": "ShinyApp: Pseudonym Generator",
     "section": "Tools Used",
-    "text": "Tools Used\nData was acquired using the tidycensus package in R, allowing access to detailed census data. The visualization was constructed using GIS software capabilities within R, using ggplot2 for map rendering and aesthetic adjustments. Data callouts were added with Adobe Photoshop."
+    "text": "Tools Used\nUsethe Shiny package in R for the web app framework. The babynames package provided access to a comprehensive dataset from the U.S. Social Security Administration, covering names from 1880 to 2017."
   },
   {
-    "objectID": "posts/redemption-poster/redemption-poster.html#objective",
-    "href": "posts/redemption-poster/redemption-poster.html#objective",
-    "title": "Dataviz: “A Recipe for Redemption” Research Poster",
-    "section": "Objective",
-    "text": "Objective\nPresent the findings from a comprehensive six-study research project on moral redemption through a detailed and engaging 48” x 36” poster at the Morality Preconference for the 2024 Annual Conference of the Society for Personality and Social Psychology."
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Fred Duong, Ph.D.",
+    "section": "",
+    "text": "I’m Fred Duong, a researcher studying how Americans think about politics, identity, and each other.\n\n\nLinkedIn fred@moreincommon.com freddoesresearch@gmail.com Portfolio\n\nI am a Senior Research Manager at More in Common US, where I lead nationally representative research on polarization and social cohesion in America. My work spans survey design, segmentation, qualitative methods, and R-based data analysis, producing findings that are rigorous, accessible, and visually compelling.\nI have an M.A. from New York University, a Ph.D. in psychology from Northeastern University, and postdoctoral training at the University of Toronto."
   },
   {
-    "objectID": "posts/redemption-poster/redemption-poster.html#approach",
-    "href": "posts/redemption-poster/redemption-poster.html#approach",
-    "title": "Dataviz: “A Recipe for Redemption” Research Poster",
-    "section": "Approach",
-    "text": "Approach\nMost research posters are three-columns. I adopted an unique five-column layout inspired by the design of newspapers to manage the extensive data from multiple studies effectively. This layout facilitated structured storytelling and highlighted key findings—organized by two overarching research questions—across the broader themes of the research, enhancing viewer engagement and understanding."
+    "objectID": "posts/free-speech/free-speech.html",
+    "href": "posts/free-speech/free-speech.html",
+    "title": "Research: Free Speech and Inclusion",
+    "section": "",
+    "text": "How do college students think about free speech, cancel culture, and ideological expression? This study, conducted in partnership with the Constructive Dialogue Institute, set out to answer those questions with a national survey of 2,618 college students.\nAs a research fellow at More in Common, I contributed to the design and analysis of this study. The survey measured attitudes toward free speech and social inclusion, experiences of being offended or called out, and students’ political self-identification."
   },
   {
-    "objectID": "posts/redemption-poster/redemption-poster.html#tools",
-    "href": "posts/redemption-poster/redemption-poster.html#tools",
-    "title": "Dataviz: “A Recipe for Redemption” Research Poster",
+    "objectID": "posts/free-speech/free-speech.html#three-takeaways",
+    "href": "posts/free-speech/free-speech.html#three-takeaways",
+    "title": "Research: Free Speech and Inclusion",
+    "section": "Three takeaways",
+    "text": "Three takeaways\n\nMost students support open discourse in principle: 94% said it’s important to listen to others with an open mind. But, nearly half (45%) have held back their own opinions in class, fearing they’d offend someone.\nFear of speaking up crosses political lines. Conservatives feel it most sharply, but students on the left report it too, suggesting this isn’t simply a story about one side silencing the other.\nSocial Justice Orientation predicts a lot. Liberal and conservative students diverge sharply on social justice beliefs, and those beliefs connect to a wide range of other attitudes and behaviors.\n\nBeyond the public-facing report, I ran deeper exploratory analyses examining how Social Justice Orientation relates to other student attitudes. The visualizations below are from that work."
+  },
+  {
+    "objectID": "posts/free-speech/free-speech.html#tools",
+    "href": "posts/free-speech/free-speech.html#tools",
+    "title": "Research: Free Speech and Inclusion",
     "section": "Tools",
-    "text": "Tools\nUsed R for data analysis and visualizations. Utilized PowerPoint for the final poster design, focusing on creating a visually appealing and informative presentation that balances text content with visual data representation."
+    "text": "Tools\nR · Qualtrics Panels · Qualtrics Survey Design · Asana · Slack"
+  },
+  {
+    "objectID": "posts/free-speech/free-speech.html#read-more",
+    "href": "posts/free-speech/free-speech.html#read-more",
+    "title": "Research: Free Speech and Inclusion",
+    "section": "Read More",
+    "text": "Read More\n\nRead the full report\nRead a More in Common newsletter summary of the report"
+  },
+  {
+    "objectID": "posts/blindspot/blindspot.html",
+    "href": "posts/blindspot/blindspot.html",
+    "title": "Design: Americans’ Environmental Blind Spot",
+    "section": "",
+    "text": "This report from More in Common reveals something counterintuitive — one the New York Times called “stunning” — Americans agree on environmental issues far more than they realize, across party lines. While I did not conduct the research or analysis, I think this is some of my strongest visual work. My goal was for the design to be as sharp as the insights.\nThe challenge was translating a perception-gap story into a visual language that felt vibrant and evoked the natural world. For the slide palette, I chose aqua gradients evoking sky and water, paired with warm sand tones. For the diverging bar charts, I chose colors that emphasize the agreement end of the scale rather than treating both poles as visually equivalent, and I matched the colors with the highlighted construct in the toplines. For select-all items with lengthy response choices, I used simple bar charts with dotted line dividers for cleaner legibility. All of it made in PowerPoint.\nView the report."
+  },
+  {
+    "objectID": "posts/beyondhesitationandhope/beyondhesitationandhope.html",
+    "href": "posts/beyondhesitationandhope/beyondhesitationandhope.html",
+    "title": "Research: Between Hesitation and Hope",
+    "section": "",
+    "text": "How do Americans actually feel about generative AI? Not the tech-optimist or tech-pessimist framings that dominate public debate, but the genuine, complicated mix of curiosity, worry, and uncertainty that most people carry. This report, released in October 2024 — when generative AI was just beginning to enter public consciousness — was our attempt to answer that question seriously.\nI served as research lead on a team effort, overseeing the research design and analysis across a nationally representative survey of 2,771 adults, eight focus groups across four key audiences, a mixed-methods panel, and a segmentation analysis. A few things stood out. GenAI wasn’t yet polarized along partisan lines — Democrats and Republicans were within a few points of each other on nearly every concern. Other groups seemed to predict larger attitude gaps: women, rural Americans, and people with a low sense of belonging were consistently more skeptical. And Americans were skeptical of GenAI’s potential for broad benefit in much the same way they were skeptical of Big Tech and government: a distrust of powerful institutions making consequential decisions on their behalf, regardless of the technology involved.\nView the report."
+  },
+  {
+    "objectID": "posts/7empathies/7empathies.html",
+    "href": "posts/7empathies/7empathies.html",
+    "title": "Research: How Seven Different “Empathies” Correlate With Personality",
+    "section": "",
+    "text": "“Empathy” is not one thing. Researchers have used the word to describe emotional reactions, cognitive perspective-taking, personal distress, and immersion in fictional characters; among others. In this academic paper, published in the Journal of Individual Differences, we asked whether these different “empathies” are actually measuring the same underlying construct, or whether they capture genuinely distinct psychological profiles.\nUsing a data-driven approach, we derived seven empathy facets from three standard empathy instruments and correlated each with a broad battery of 25 personality variables. The short answer: it depends entirely on which empathy you measure. Some facets — like tenderhearted concern and perspective-taking — had nearly identical personality profiles. Others, like anxious reaction to others’ distress, had a profile that contradicted the rest. The “empathic person” shifts depending on how empathy is defined.\n\nView the published journal article (paywalled): https://doi.org/10.1027/1614-0001/a000426\nView the pre-print (not paywalled): https://osf.io/preprints/psyarxiv/8egzb_v1"
+  },
+  {
+    "objectID": "posts/connectionopportunity/connectionopportunity.html",
+    "href": "posts/connectionopportunity/connectionopportunity.html",
+    "title": "Design: The Connection Opportunity",
+    "section": "",
+    "text": "This two-year study surveyed over 6,000 Americans on what it takes to connect across lines of race, religion, class, and political difference. The headline finding is both simple and underappreciated: most Americans want to connect across difference, and the biggest barrier isn’t hostility; it’s a lack of opportunity.\nWorking with a graphic designer, I provided design direction, contributed substantially to the data visualization, and made slide decks, working to ensure the visual presentation matched the clarity and ambition of the research.\nTools: R · PowerPoint · Flourish · Canva\nView the report"
+  },
+  {
+    "objectID": "posts/buildingcultures/buildingcultures.html",
+    "href": "posts/buildingcultures/buildingcultures.html",
+    "title": "Research: Building Cultures of Constructive Dialogue",
+    "section": "",
+    "text": "Drawing on research across more than 100 colleges and interviews with 20 campus leaders, this report by Constructive Dialogue Institute examines how institutions are successfully building cultures where difficult conversations can actually happen. One finding stood out to me: leadership buy-in is not just helpful, but foundational. When presidential and senior leadership actively model engaging across difference, that message pervades and persists as culture. When it doesn’t come from the top, even well-designed programs struggle to take hold.\nI contributed to the research and analysis, wrote substantial portions of the report, and edited throughout.\nView the report."
   }
 ]
